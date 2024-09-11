@@ -1,0 +1,70 @@
+<powerpagecomponent powerpagecomponentid="8c86a330-9d68-4e5f-8fa7-fea020beec80">
+  <content>{"filecontent":null,"copy":"&lt;div id=\"iwbosl\" data-component-theme=\"portalThemeColor7\" class=\"row sectionBlockLayout\" style=\"display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 15px;\"&gt;&lt;/div&gt;\n&lt;div id=\"i51hvf\" class=\"row sectionBlockLayout text-left\" style=\"display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;\"&gt;\n  &lt;div id=\"i931bf\" class=\"container\" style=\"padding: 0px; display: flex; flex-wrap: wrap;\"&gt;\n    &lt;div id=\"ibxoc\" class=\"col-md-6 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;\"&gt;\n      &lt;h2 id=\"irkkof\" style=\"text-align: center; color: var(--portalThemeColor8);\"&gt;​&lt;b&gt;Ristorante Per Squadre Customer Feedback Survey&lt;/b&gt;&lt;/h2&gt;\n      &lt;div id=\"isxbra\" class=\"row sectionBlockLayout\" style=\"display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 15px;\"&gt;&lt;/div&gt;\n      &lt;p id=\"i5qzyw\" style=\"color: var(--portalThemeColor8); text-align: center;\"&gt;Thank you for dining with us at Ristorante Per Squadre! We value your opinion and would greatly appreciate your feedback to help us enhance your dining experience. Please take a moment to share your thoughts by filling out the following feedback form. Your input is invaluable to us. Grazie!&amp;nbsp;&lt;/p&gt;\n    &lt;/div&gt;\n    &lt;div id=\"iaisi\" class=\"col-md-6 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;\"&gt;{% entityform name: 'Ristorante Feedback main' %}&lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n&lt;div data-component-theme=\"portalThemeColor1\" id=\"iufawf\" class=\"row sectionBlockLayout text-left\" style=\"display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;\"&gt;\n  &lt;div id=\"ifkcb1\" class=\"container\" style=\"padding: 0px; display: flex; flex-wrap: wrap;\"&gt;\n    &lt;div id=\"i7dbp4\" class=\"col-md-8 columnBlockLayout\" style=\"word-break: break-word; flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;\"&gt;&lt;img alt=\"Contact Us\" src=\"https://cdn.hubblecontent.msit.osi.office.net/m365content/publish/90ea154a-ce69-4620-bdce-74229140cd53/thumbnails/xxlarge.jpg\" id=\"i7662r\" style=\"max-width: 100%; width: 100%; height: auto; border-radius: 8px;\" /&gt;&lt;/div&gt;\n    &lt;div id=\"i0lfxq\" class=\"col-md-4 columnBlockLayout\" style=\"word-break: break-word; flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;\"&gt;\n      &lt;h2&gt;Contact Us&lt;/h2&gt;\n      &lt;p&gt;For reservations or any inquiries, please feel free to contact us. Our friendly staff is always ready to assist you.&lt;/p&gt;\n      &lt;p&gt;Phone: 123-456-7890&lt;/p&gt;\n      &lt;p id=\"ii84uz\"&gt;Email: info@ristorante.com&lt;/p&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n&lt;div id=\"ipu8o3\" data-component-theme=\"portalThemeColor7\" class=\"row sectionBlockLayout\" style=\"display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 15px;\"&gt;&lt;/div&gt;\n\n{% assign orderguid = request.params['rps_orderid'] %}\n\n&lt;script&gt;\n  $(document).ready(function () {\n    var urlParams = new URLSearchParams(window.location.search);\n    var orderName = urlParams.get('rps_order_name');\n\n    $(\"#rps_orderid_name\").attr(\"value\", orderName);\n    $(\"#rps_orderid\").attr(\"value\", '{{ orderguid }}');\n    $(\"#rps_orderid_entityname\").attr(\"value\", \"rps_order\");\n    $(\"#rps_orderid_name\").parents(\"td\").eq(0).hide();\n  });\n&lt;/script&gt;\n\n\n\n\n\n&lt;!-- {% assign orderguid = request.params['rps_orderid'] %}\n\n{% assign ordername = page.url %}\n\n&lt;script&gt;\n\n  $(document).ready(function () {\n    var url = new URLSearchParams(window.location.search);\n    $(\"#rps_orderid_name\").attr(\"value\", '{{ ordername | slice: -10, 10 }}');\n    $(\"#rps_orderid\").attr(\"value\", '{{ orderguid }}');\n    $(\"#rps_orderid_entityname\").attr(\"value\", \"crf19_ristorantefeedback\");\n    // $(\"#rps_orderid_name\").parents(\"td\").eq(0).hide();\n  });\n&lt;/script&gt; --&gt;","enablerating":false,"enabletracking":false,"excludefromsearch":false,"hiddenfromsitemap":false,"sharedpageconfiguration":false,"isroot":false,"rootwebpageid":"97f0d62e-bc32-4624-bc7d-a72380d0609b","pagetemplateid":"086a120e-98f0-6437-43e1-23f906386485","partialurl":"survey","publishingstateid":"3fedcfd4-7ce7-48dd-a7da-4074395475b3","parentpageid":"4550d6db-c76f-4336-88f3-6721dd508858","feedbackpolicy":756150000,"customjavascript":""}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Survey</name>
+  <powerpagecomponenttype>2</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>952afb3b-80e6-4b06-a52b-d28155880003</powerpagesiteid>
+  </powerpagesiteid>
+  <powerpagesitelanguageid>
+    <powerpagesitelanguageid>acca8b8f-f1df-4fa3-b34c-1b670f82f4fa</powerpagesitelanguageid>
+  </powerpagesitelanguageid>
+  <searchcontent>&lt;div id="iwbosl" data-component-theme="portalThemeColor7" class="row sectionBlockLayout" style="display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 15px;"&gt;&lt;/div&gt;
+&lt;div id="i51hvf" class="row sectionBlockLayout text-left" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;"&gt;
+  &lt;div id="i931bf" class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"&gt;
+    &lt;div id="ibxoc" class="col-md-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;"&gt;
+      &lt;h2 id="irkkof" style="text-align: center; color: var(--portalThemeColor8);"&gt;​&lt;b&gt;Ristorante Per Squadre Customer Feedback Survey&lt;/b&gt;&lt;/h2&gt;
+      &lt;div id="isxbra" class="row sectionBlockLayout" style="display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 15px;"&gt;&lt;/div&gt;
+      &lt;p id="i5qzyw" style="color: var(--portalThemeColor8); text-align: center;"&gt;Thank you for dining with us at Ristorante Per Squadre! We value your opinion and would greatly appreciate your feedback to help us enhance your dining experience. Please take a moment to share your thoughts by filling out the following feedback form. Your input is invaluable to us. Grazie!&amp;nbsp;&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div id="iaisi" class="col-md-6 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;"&gt;{% entityform name: 'Ristorante Feedback main' %}&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div data-component-theme="portalThemeColor1" id="iufawf" class="row sectionBlockLayout text-left" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;"&gt;
+  &lt;div id="ifkcb1" class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"&gt;
+    &lt;div id="i7dbp4" class="col-md-8 columnBlockLayout" style="word-break: break-word; flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;"&gt;&lt;img alt="Contact Us" src="https://cdn.hubblecontent.msit.osi.office.net/m365content/publish/90ea154a-ce69-4620-bdce-74229140cd53/thumbnails/xxlarge.jpg" id="i7662r" style="max-width: 100%; width: 100%; height: auto; border-radius: 8px;" /&gt;&lt;/div&gt;
+    &lt;div id="i0lfxq" class="col-md-4 columnBlockLayout" style="word-break: break-word; flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;"&gt;
+      &lt;h2&gt;Contact Us&lt;/h2&gt;
+      &lt;p&gt;For reservations or any inquiries, please feel free to contact us. Our friendly staff is always ready to assist you.&lt;/p&gt;
+      &lt;p&gt;Phone: 123-456-7890&lt;/p&gt;
+      &lt;p id="ii84uz"&gt;Email: info@ristorante.com&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="ipu8o3" data-component-theme="portalThemeColor7" class="row sectionBlockLayout" style="display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 15px;"&gt;&lt;/div&gt;
+
+{% assign orderguid = request.params['rps_orderid'] %}
+
+&lt;script&gt;
+  $(document).ready(function () {
+    var urlParams = new URLSearchParams(window.location.search);
+    var orderName = urlParams.get('rps_order_name');
+
+    $("#rps_orderid_name").attr("value", orderName);
+    $("#rps_orderid").attr("value", '{{ orderguid }}');
+    $("#rps_orderid_entityname").attr("value", "rps_order");
+    $("#rps_orderid_name").parents("td").eq(0).hide();
+  });
+&lt;/script&gt;
+
+
+
+
+
+&lt;!-- {% assign orderguid = request.params['rps_orderid'] %}
+
+{% assign ordername = page.url %}
+
+&lt;script&gt;
+
+  $(document).ready(function () {
+    var url = new URLSearchParams(window.location.search);
+    $("#rps_orderid_name").attr("value", '{{ ordername | slice: -10, 10 }}');
+    $("#rps_orderid").attr("value", '{{ orderguid }}');
+    $("#rps_orderid_entityname").attr("value", "crf19_ristorantefeedback");
+    // $("#rps_orderid_name").parents("td").eq(0).hide();
+  });
+&lt;/script&gt; --&gt;Survey</searchcontent>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

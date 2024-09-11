@@ -1,0 +1,11 @@
+<powerpagecomponent powerpagecomponentid="cb3ba836-6815-48e1-a9ef-6e23aec99cce">
+  <content>{"description":"The Prefix entered here will be used to filter Notes Text, allowing you to control notes exposed on the Portal ex: *WEB*","value":"*WEB*"}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>KnowledgeManagement/NotesFilter</name>
+  <powerpagecomponenttype>9</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>952afb3b-80e6-4b06-a52b-d28155880003</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

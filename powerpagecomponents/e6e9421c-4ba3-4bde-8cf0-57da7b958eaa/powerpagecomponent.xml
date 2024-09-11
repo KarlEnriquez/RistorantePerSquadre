@@ -1,0 +1,11 @@
+<powerpagecomponent powerpagecomponentid="e6e9421c-4ba3-4bde-8cf0-57da7b958eaa">
+  <content>{"importsequencenumber":3,"value":"true"}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Authentication/Registration/ExternalLoginEnabled</name>
+  <powerpagecomponenttype>9</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>952afb3b-80e6-4b06-a52b-d28155880003</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

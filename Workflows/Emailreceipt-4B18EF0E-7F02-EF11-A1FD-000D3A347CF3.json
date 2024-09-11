@@ -1,0 +1,180 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_office365-1": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "rps_sharedoffice365_92354"
+        },
+        "api": {
+          "name": "shared_office365"
+        }
+      },
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "rps_sharedcommondataserviceforapps_6ec9e"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_the_Payment_Status_is_updated_to_Paid": {
+          "metadata": {
+            "operationMetadataId": "f6318184-77d3-4f36-97ba-af1dd59872e5"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 3,
+              "subscriptionRequest/entityname": "rps_order",
+              "subscriptionRequest/scope": 4
+            },
+            "authentication": "@parameters('$authentication')"
+          },
+          "conditions": [
+            {
+              "expression": "@equals(triggerOutputs()?['body/_rps_paymentstatus_label'], 'Paid')"
+            }
+          ]
+        }
+      },
+      "actions": {
+        "Send_an_email_(V2)": {
+          "runAfter": {
+            "Apply_to_each": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "198699bc-6fb0-4a20-b86e-ee516a3f7b3e"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_office365-1",
+              "operationId": "SendEmailV2",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+            },
+            "parameters": {
+              "emailMessage/To": "@outputs('Get_the_Customer_Information')?['body/emailaddress1']",
+              "emailMessage/Subject": "Your Order Receipt from Ristorante Per Squadre",
+              "emailMessage/Body": "<p>Dear @{body('Get_the_Customer_Information')?['fullname']},</p>\n<p>Thank you for your recent purchase from Ristorante Per Squadre. We appreciate your business! Below, you'll find details about your order:<br><b>\n<strong style=\"font-size: 16px;\">ORDER DETAILS:</strong></b></p><p><b><strong>Order Number:\n</strong></b> @{triggerBody()?['rps_orderid']}</p><p><b><strong>Date of purchase:</strong></b> @{triggerBody()?['createdon']}</p><p><b><strong>Total Amount: </strong></b>$@{triggerBody()?['rps_grandtotal']}</p><p><strong>Items:</strong></p><ul>@{variables('orderdetails')}</ul></p><p><b><strong style=\"font-size: 16px;\">Survey:</strong></b></p><p>We strive to provide the best possible service to our customers. Please take a moment to fill out our survey and let us know about your experience. <a href=\"https://ristorantepersquadre-2deb.powerappsportals.com/survey/?rps_orderid=@{triggerOutputs()?['body/rps_orderid']}&rps_order_name=@{triggerOutputs()?['body/rps_name']}\">Click here to take the survey</a>&nbsp;</p><br><br>\n",
+              "emailMessage/Importance": "Normal"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Get_the_Customer_Information": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "261bde6c-6a61-47d0-b3f7-681a1b4c9efe"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "contacts",
+              "recordId": "@triggerOutputs()?['body/_rps_customer_value']"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Initialize_variable_for_order_details": {
+          "runAfter": {
+            "Get_the_Customer_Information": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "050568b1-891e-4cdb-9e66-0c8a27ceeb66"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "orderdetails",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "List_rows": {
+          "runAfter": {
+            "Initialize_variable_for_order_details": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "bbd57447-e816-46ee-b12a-270ef3ec412c"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "rps_orderitemses",
+              "fetchXml": "<fetch top=\"50\">\n  <entity name=\"rps_orderitems\">\n    <attribute name=\"crf19_price\" />\n    <attribute name=\"rps_orderitemsid\" />\n    <attribute name=\"rps_quantity\" />\n    <filter>\n      <condition attribute=\"rps_orderid\" operator=\"eq\" value=\"@{triggerOutputs()?['body/rps_orderid']}\" />\n    </filter>\n    <link-entity name=\"crf19_menu\" from=\"crf19_menuid\" to=\"rps_menuitem\" link-type=\"inner\" alias=\"MenuItem\">\n      <attribute name=\"crf19_name\" />\n    </link-entity>\n  </entity>\n</fetch>"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "Apply_to_each": {
+          "foreach": "@outputs('List_rows')?['body/value']",
+          "actions": {
+            "Append_to_string_variable": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "27ddabdb-f990-458c-8143-21883a481417"
+              },
+              "type": "AppendToStringVariable",
+              "inputs": {
+                "name": "orderdetails",
+                "value": "@concat('<li>',items('Apply_to_each')['MenuItem.crf19_name'], ' - Quantity: ', items('Apply_to_each')['rps_quantity'], ' - $', items('Apply_to_each')['crf19_price'], '</li>')"
+              }
+            }
+          },
+          "runAfter": {
+            "List_rows": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "de0ac723-0870-4cd2-a98f-e82594075910"
+          },
+          "type": "Foreach"
+        }
+      },
+      "outputs": {}
+    },
+    "templateName": ""
+  },
+  "schemaVersion": "1.0.0.0"
+}

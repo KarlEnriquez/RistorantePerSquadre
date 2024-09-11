@@ -1,0 +1,41 @@
+<powerpagecomponent powerpagecomponentid="b6eccf65-c0ba-4191-953f-2dc42436aa80">
+  <content>{
+  "filecontent": null,
+  "lcid": 1033,
+  "entityname": "crf19_ristorantefeedback",
+  "formname": "Information",
+  "mode": 100000000,
+  "onsuccess": 756150000,
+  "successmessage": "[{\"LCID\":1033,\"Value\":\"Thank you for your feedback!\"}]",
+  "hideformonsuccess": true,
+  "redirectwebpage": null,
+  "redirecturl": null,
+  "captcharequired": false,
+  "showcaptchaforauthenticatedusers": false,
+  "entitypermissionsenabled": true,
+  "attachfilelabel": "[{\"LCID\":1033,\"Value\":\"\"}]",
+  "attachfilemaxsize": null,
+  "entitysourcetype": null,
+  "recordidquerystringparametername": null,
+  "entityFormMetadatas": [],
+  "geolocation_maptype": 756150000,
+  "referencequerystringname": "rps_orderid",
+  "referencequerystringisprimarykey": true,
+  "referencequeryattributelogicalname": "rps_orderid",
+  "referenceentitysourcetype": 756150000,
+  "populatereferenceentitylookupfield": true,
+  "referenceentitylogicalname": "rps_order",
+  "setentityreference": true,
+  "referenceentityrelationshipname": "rps_Order_OrderId_crf19_RistoranteFeedbac",
+  "referenceentityreadonlyformname": "Order Details",
+  "referenceentityshowreadonlyform": true
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Feedback Survey</name>
+  <powerpagecomponenttype>15</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>952afb3b-80e6-4b06-a52b-d28155880003</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

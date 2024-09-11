@@ -1,0 +1,143 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "runtimeSource": "embedded",
+        "connection": {
+          "connectionReferenceLogicalName": "rps_sharedcommondataserviceforapps_d7f91"
+        },
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        }
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        },
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        }
+      },
+      "triggers": {
+        "When_An_Order_Item_is_Comped": {
+          "metadata": {
+            "operationMetadataId": "9f6aa309-e545-4a0e-a312-93a168edc25a"
+          },
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "subscriptionRequest/message": 3,
+              "subscriptionRequest/entityname": "rps_orderitems",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filteringattributes": "rps_comped"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      },
+      "actions": {
+        "Subtotal_=_0": {
+          "runAfter": {},
+          "metadata": {
+            "operationMetadataId": "5b802959-22f6-4a48-9fe0-a21815f79e37"
+          },
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "Subtotal",
+                "type": "float",
+                "value": 0
+              }
+            ]
+          }
+        },
+        "Get_Related_Order_Items": {
+          "runAfter": {
+            "Subtotal_=_0": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "89182fbc-fb8b-4401-b845-8cefca3b08f8"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "rps_orderitemses",
+              "$filter": "_rps_orderid_value eq @{triggerOutputs()?['body/_rps_orderid_value']}"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        },
+        "For_Each_Order_Item,_Sum_Up_the_Subtotal": {
+          "foreach": "@outputs('Get_Related_Order_Items')?['body/value']",
+          "actions": {
+            "Subtotal_+=_Price": {
+              "runAfter": {},
+              "metadata": {
+                "operationMetadataId": "673ba6ff-b1fe-4695-8dc8-71d793c90d32"
+              },
+              "type": "IncrementVariable",
+              "inputs": {
+                "name": "Subtotal",
+                "value": "@items('For_Each_Order_Item,_Sum_Up_the_Subtotal')?['crf19_price']"
+              }
+            }
+          },
+          "runAfter": {
+            "Get_Related_Order_Items": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "493cf566-641e-49cb-a6d5-31cbc1a5c42f"
+          },
+          "type": "Foreach"
+        },
+        "Update_the_Subtotal_in_the_Order_item": {
+          "runAfter": {
+            "For_Each_Order_Item,_Sum_Up_the_Subtotal": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "329051f8-3df9-41f4-9b7e-ab4708727fa8"
+          },
+          "type": "OpenApiConnection",
+          "inputs": {
+            "host": {
+              "connectionName": "shared_commondataserviceforapps",
+              "operationId": "UpdateRecord",
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+            },
+            "parameters": {
+              "entityName": "rps_orders",
+              "recordId": "@triggerOutputs()?['body/_rps_orderid_value']",
+              "item/rps_subtotall": "@variables('Subtotal')"
+            },
+            "authentication": "@parameters('$authentication')"
+          }
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

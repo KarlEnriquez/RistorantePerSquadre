@@ -1,0 +1,200 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "rps_sharedcommondataserviceforapps_8e7d9"
+        },
+        "runtimeSource": "embedded"
+      },
+      "shared_flowpush": {
+        "api": {
+          "name": "shared_flowpush"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "rps_sharedflowpush_082c3"
+        },
+        "runtimeSource": "embedded"
+      },
+      "shared_powerappsnotification": {
+        "api": {
+          "name": "shared_powerappsnotification"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "new_sharedpowerappsnotification_f79be"
+        },
+        "runtimeSource": "embedded"
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "undefined",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "triggers": {
+        "When_Order_Status_is_Set_to_Complete": {
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "parameters": {
+              "subscriptionRequest/message": 3,
+              "subscriptionRequest/entityname": "rps_order",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filteringattributes": "rps_preparationstatus",
+              "subscriptionRequest/filterexpression": "rps_preparationstatus eq 2"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          }
+        }
+      },
+      "actions": {
+        "Get_Order_Items": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "rps_orderitemses",
+              "$filter": "_rps_orderid_value eq @{triggerBody()?['rps_orderid']}"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "Initialize_MessageToServer": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Apply_to_each": {
+          "type": "Foreach",
+          "foreach": "@outputs('Get_Order_Items')?['body/value']",
+          "actions": {
+            "Append_to_string_variable": {
+              "type": "AppendToStringVariable",
+              "inputs": {
+                "name": "MessageToServer",
+                "value": ", @{items('Apply_to_each')?['rps_name']}"
+              }
+            }
+          },
+          "runAfter": {
+            "Get_Order_Items": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Get_Order_Table": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "rps_tableses",
+              "recordId": "@triggerBody()?['_rps_tablenumber_value']"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "Apply_to_each": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Get_Server": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "systemusers",
+              "recordId": "@body('Get_Order_Table')?['_rps_server_value']"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "Get_Order_Table": [
+              "Succeeded"
+            ]
+          }
+        },
+        "Initialize_MessageToServer": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "MessageToServer",
+                "type": "string"
+              }
+            ]
+          },
+          "runAfter": {}
+        },
+        "Send_me_a_mobile_notification": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "NotificationDefinition/notificationText": "Error on email server, Server for table @{body('Get_Order_Table')?['rps_name']} is probably missing"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_flowpush",
+              "operationId": "SendNotification",
+              "connectionName": "shared_flowpush"
+            }
+          },
+          "runAfter": {
+            "Get_Server": [
+              "Failed"
+            ]
+          }
+        },
+        "Send_push_notification": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "payload/recipients": [
+                "@body('Get_Server')?['internalemailaddress']"
+              ],
+              "payload/message": "Your order@{variables('MessageToServer')} for table @{body('Get_Order_Table')?['rps_name']} is ready!",
+              "payload/openApp": true,
+              "payload/params": {
+                "orderId": "@triggerBody()?['rps_orderid']"
+              }
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_powerappsnotification",
+              "operationId": "SendPushNotification",
+              "connectionName": "shared_powerappsnotification"
+            }
+          },
+          "runAfter": {
+            "Get_Server": [
+              "Succeeded"
+            ]
+          }
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

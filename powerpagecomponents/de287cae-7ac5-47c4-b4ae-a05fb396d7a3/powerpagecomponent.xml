@@ -1,0 +1,12 @@
+<powerpagecomponent powerpagecomponentid="de287cae-7ac5-47c4-b4ae-a05fb396d7a3">
+  <content>{"createdOn":"2024-04-26T03:31:52.291Z","parentpageid":"4550d6db-c76f-4336-88f3-6721dd508858","publishingstateid":"3fedcfd4-7ce7-48dd-a7da-4074395475b3","partialurl":"spaghetti.jpg","title":"","summary":"","enabletracking":false,"excludefromsearch":false,"hiddenfromsitemap":false}</content>
+  <filecontent mimetype="image/jpeg">spaghetti.jpg</filecontent>
+  <iscustomizable>1</iscustomizable>
+  <name>spaghetti.jpg</name>
+  <powerpagecomponenttype>3</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>952afb3b-80e6-4b06-a52b-d28155880003</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

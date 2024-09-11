@@ -1,0 +1,20 @@
+<powerpagecomponent powerpagecomponentid="26851a9a-77af-4383-8b3c-390742e12822">
+  <content>{
+  "powerpagesitelanguageid": "acca8b8f-f1df-4fa3-b34c-1b670f82f4fa",
+  "filecontent": null,
+  "display_name": "Footer",
+  "type": 756150001,
+  "value": "&lt;p id=\"ih1k3y\"&gt;&lt;span&gt;Copyright © &lt;/span&gt;{{ now | date: 'yyyy' }}&lt;span&gt;. All rights reserved.&lt;/span&gt;&lt;/p&gt;\n"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Footer</name>
+  <powerpagecomponenttype>7</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>952afb3b-80e6-4b06-a52b-d28155880003</powerpagesiteid>
+  </powerpagesiteid>
+  <powerpagesitelanguageid>
+    <powerpagesitelanguageid>acca8b8f-f1df-4fa3-b34c-1b670f82f4fa</powerpagesitelanguageid>
+  </powerpagesitelanguageid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

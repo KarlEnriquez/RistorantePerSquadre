@@ -1,0 +1,110 @@
+
+$presetThemeId: 329a43fa-5471-4678-8330-d3a0b404e9bb;
+$isModified: true;
+
+$name: ORANGE;
+
+$color1: #eeeeee;
+$color2: #FFCA4B;
+$color3: #277493;
+$color4: #8B9A46;
+$color5: #F3DBB1;
+$color6: #eeeeee;
+$color7: #541212;
+$color8: #0F0E0E;
+$color9: #E58700;
+$color10: ;
+$color11: ;
+$color12: ;
+
+$primaryColor: $color2;
+$headerColor: $color1;
+$headerMenuTextColor: $color7;
+$headerMenuHoverColor: $color1;
+$bodyBackground: $color1;
+$footerColor: $color1;
+$footerTextColor: $color8;
+$footerTextFont: Arial;
+$footerTextWeight: 400;
+$footerTextSize: 16;
+
+$headerMenuTextFont: Arial;
+$headerMenuTextWeight: 400;
+$headerMenuTextSize: 20;
+$headerMenuHoverStyle: Underline;
+
+$siteTitlecolor: $color1;
+$siteTitlefont: Arial;
+$siteTitleweight: 400;
+$siteTitlesize: 30;
+
+$h1font: Garamond;
+$h1weight: 400;
+$h1size: 68;
+$h1color: $color1;
+
+$h2font: Garamond;
+$h2weight: 400;
+$h2size: 36;
+$h2color: $color1;
+
+$h3font: Garamond;
+$h3weight: 400;
+$h3size: 24;
+$h3color: $color8;
+
+$h4font: Garamond;
+$h4weight: 400;
+$h4size: 25;
+$h4color: $color8;
+
+$h5font: Garamond;
+$h5weight: 700;
+$h5size: 14;
+$h5color: $color8;
+
+$p1font: Garamond;
+$p1weight: 400;
+$p1size: 20;
+$p1color: $color8;
+
+$p2font: Arial;
+$p2weight: 400;
+$p2size: 16;
+$p2color: $color8;
+
+$afont: Garamond;
+$aweight: 400;
+$asize: 14;
+$atextcolor: $color8;
+$astyle: Underline;
+$aonhoverstyle: Plain text;
+$aonhovertextcolor: $color8;
+
+$button1style: Filled;
+$button1radius: 2;
+$button1font: Garamond;
+$button1weight: 600;
+$button1size: 18;
+$button1fillcolor: $color4;
+$button1textcolor: $color8;
+$button1onhoverstyle: Filled;
+$button1onhoverfillcolor: $color7;
+$button1onhovertextcolor: $color1;
+
+$button2style: Outline;
+$button2radius: 2;
+$button2font: Garamond;
+$button2weight: 600;
+$button2size: 14;
+$button2fillcolor: $color4;
+$button2textcolor: $color4;
+$button2onhoverstyle: Filled;
+$button2onhoverfillcolor: $color4;
+$button2onhovertextcolor: $color8;
+
+$sectioncolumnmargintopbottom: 60;
+$sectioncolumnmarginunit: px;
+$sectioncolumnpaddingunit: px;
+$sectioncolumncontentpadding: 16;
+

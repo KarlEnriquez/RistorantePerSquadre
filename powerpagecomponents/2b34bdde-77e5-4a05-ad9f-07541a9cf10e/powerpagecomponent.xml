@@ -1,0 +1,83 @@
+<powerpagecomponent powerpagecomponentid="2b34bdde-77e5-4a05-ad9f-07541a9cf10e">
+  <content>{
+  "filecontent": null,
+  "copy": "&lt;div id=\"ijtlxp\" data-component-theme=\"portalThemeColor7\" class=\"row sectionBlockLayout\" style=\"display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 15px;\"&gt;&lt;/div&gt;\n&lt;div id=\"ial0k\" class=\"row sectionBlockLayout text-left\" style=\"display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;\"&gt;\n  &lt;div id=\"ioyc4\" class=\"container\" style=\"padding: 0px; display: flex; flex-wrap: wrap;\"&gt;\n    &lt;div id=\"ihxbf\" class=\"col-md-6 columnBlockLayout\" style=\"word-break: break-word; flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;\"&gt;&lt;img alt=\"insiderestaurant\" src=\"/insiderestaurant.jpg\" id=\"iicxk\" name=\"insiderestaurant.jpg\" style=\"max-width: 100%; width: 100%; height: 679px; border-radius: 8px;\" /&gt;&lt;/div&gt;\n    &lt;div id=\"ipnlh\" class=\"col-md-6 columnBlockLayout\" style=\"word-break: break-word; flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;\"&gt;\n      &lt;h2 id=\"i4hs2\" style=\"text-align: left; color: var(--portalThemeColor8);\"&gt;Our History&lt;/h2&gt;\n      &lt;p id=\"ixj1dj\" style=\"color: var(--portalThemeColor8); text-align: left;\"&gt;Founded in 2024 by four culinary visionaries - Alan Barragan, Markuss Mera Riera, Chris Leipold, and Anuli Edom - Ristorante Per Squadre brings the essence of Italian dining to the vibrant streets of Little Italy in New York City. Each founder's unique passion and expertise have woven together to create a truly authentic Italian experience, celebrating the rich flavors and traditions of Italy with a modern twist.&lt;br id=\"ifwhs8\" /&gt;&lt;br id=\"ib4ozg\" /&gt;Located at 123 Mulberry Street, our restaurant is a haven for those seeking a taste of Italy in the heart of NYC. Our menu features classic dishes made with locally sourced ingredients, each paired perfectly with selections from our extensive wine list, curated by co-founder and sommelier Markuss Mera Riera. From the ambience to the service, every detail at Ristorante Per Squadre is designed to transport our guests to the warmth and charm of Italian hospitality.&lt;/p&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n&lt;div id=\"itn37d\" class=\"row sectionBlockLayout text-left\" style=\"display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;\"&gt;\n  &lt;div id=\"izmh0t\" class=\"container\" style=\"padding: 0px; display: flex; flex-wrap: wrap;\"&gt;\n    &lt;div id=\"ifmc7y\" class=\"col-md-12 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;\"&gt;\n      &lt;h4 id=\"ilk2fj\" style=\"text-align: center; color: var(--portalThemeColor8);\"&gt;​&lt;i id=\"ixxrsc\" aria-label='Text \"Every dish at Ristorante Per Squadre is a masterpiece, crafted with such authenticity and passion, it&amp;apos;s like a culinary trip to Italy without leaving NYC. The ambiance just complements the food perfectly, making each visit a memorable experience.\" Press enter to edit' style=\"position: relative;\"&gt;\"Every dish at Ristorante Per Squadre is a masterpiece, crafted with such authenticity and passion, it's like a culinary trip to Italy without leaving NYC. The ambiance just complements the food perfectly, making each visit a memorable experience.\"&lt;/i&gt; &lt;br id=\"igjet\" /&gt;- Giovanni Rossi, Food Critic&lt;/h4&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n&lt;div id=\"i33wv5\" class=\"row sectionBlockLayout text-left\" style=\"display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;\"&gt;\n  &lt;div id=\"ivbl63\" class=\"container\" style=\"padding: 0px; display: flex; flex-wrap: wrap;\"&gt;\n    &lt;div id=\"if6wr\" class=\"col-md-12 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;\"&gt;\n      &lt;h2 id=\"i2qvif\" style=\"text-align: center; color: var(--portalThemeColor8);\"&gt;Meet our Team&lt;/h2&gt;\n      &lt;div id=\"ivbl63-2\" class=\"container\" style=\"padding: 0px; display: flex; flex-wrap: wrap;\"&gt;\n        &lt;div id=\"irepm\" class=\"col-md-4 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;\"&gt;\n          &lt;h3 id=\"imjhf\" class=\"team-title\" style=\"text-align: center; color: var(--portalThemeColor8);\"&gt;Hosts &amp;amp; Servers&lt;/h3&gt;\n          &lt;p id=\"i4ozp\" style=\"text-align: center; color: var(--portalThemeColor8);\"&gt;Alan Barragan&lt;/p&gt;\n          &lt;p id=\"idhza\" style=\"text-align: center; color: var(--portalThemeColor8);\"&gt;Hunter Atkins&lt;/p&gt;\n          &lt;p id=\"ipcjt\" style=\"text-align: center; color: var(--portalThemeColor8);\"&gt;Bryan Zbojna&lt;/p&gt;\n          &lt;p id=\"i1b9ua\" style=\"text-align: center; color: var(--portalThemeColor8);\"&gt;Daniel Iriza&lt;/p&gt;\n          &lt;p id=\"i41nai\" style=\"text-align: center; color: var(--portalThemeColor8);\"&gt;Wesley Edwards&lt;/p&gt;\n        &lt;/div&gt;\n        &lt;div id=\"i81tur\" class=\"col-md-4 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;\"&gt;\n          &lt;h3 id=\"iurvsb\" class=\"team-title\" style=\"text-align: center; color: var(--portalThemeColor8);\"&gt;Bartenders&lt;/h3&gt;\n          &lt;p id=\"imee8w\" style=\"text-align: center; color: var(--portalThemeColor8);\"&gt;Anuli Edom&lt;/p&gt;\n          &lt;p id=\"ifzoru\" style=\"text-align: center; color: var(--portalThemeColor8);\"&gt;Toni Moore&lt;/p&gt;\n          &lt;p id=\"i2pxbe\" style=\"text-align: center; color: var(--portalThemeColor8);\"&gt;Karl Enriquez&lt;/p&gt;\n        &lt;/div&gt;\n        &lt;div id=\"ie25v3\" class=\"col-md-4 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;\"&gt;\n          &lt;h3 id=\"iqmokl\" class=\"team-title\" style=\"text-align: center; color: var(--portalThemeColor8);\"&gt;Kitchen Staff&lt;/h3&gt;\n          &lt;p id=\"irifzm\" style=\"text-align: center; color: var(--portalThemeColor8);\"&gt;Chris Leipold&lt;/p&gt;\n          &lt;p id=\"ii7xrg\" style=\"text-align: center; color: var(--portalThemeColor8);\"&gt;Ethan Wintill&lt;/p&gt;\n          &lt;p id=\"iwj8pf\" style=\"text-align: center; color: var(--portalThemeColor8);\"&gt;Bram Groen&lt;/p&gt;\n        &lt;/div&gt;\n        &lt;div id=\"ix25h6\" class=\"col-md-12 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;\"&gt;\n          &lt;h3 id=\"iyrpxd\" class=\"team-title\" style=\"text-align: center; color: var(--portalThemeColor8);\"&gt;Managers&lt;/h3&gt;\n          &lt;p id=\"i8flfh\" style=\"text-align: center; color: var(--portalThemeColor8);\"&gt;Markuss Mera Riera&lt;/p&gt;\n          &lt;p id=\"isolel\" style=\"text-align: center; color: var(--portalThemeColor8);\"&gt;Carlos Urena Alvarez&lt;/p&gt;\n          &lt;p id=\"i8x0bj\" style=\"text-align: center; color: var(--portalThemeColor8);\"&gt;Kris Robinson&lt;/p&gt;\n        &lt;/div&gt;\n      &lt;/div&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n",
+  "enablerating": false,
+  "enabletracking": false,
+  "excludefromsearch": false,
+  "hiddenfromsitemap": false,
+  "sharedpageconfiguration": false,
+  "isroot": false,
+  "rootwebpageid": "da56d956-d6d6-4dcc-90f9-615874ca2e78",
+  "pagetemplateid": "086a120e-98f0-6437-43e1-23f906386485",
+  "partialurl": "about",
+  "publishingstateid": "3fedcfd4-7ce7-48dd-a7da-4074395475b3",
+  "parentpageid": "4550d6db-c76f-4336-88f3-6721dd508858",
+  "feedbackpolicy": 756150000,
+  "customcss": ".columnBlockLayout {\r\n    flex-grow: 1;\r\n    display: flex;\r\n    flex-direction: column;\r\n    align-items: center; /* Aligns content to the center horizontally */\r\n    padding: 8px; /* Padding for spacing inside the columns */\r\n    box-sizing: border-box; /* Include padding in width calculation */\r\n}\r\n\r\n.columnBlockLayout h3, .columnBlockLayout p {\r\n    width: 100%; /* Ensures full width for center alignment */\r\n    text-align: center; /* Centers text */\r\n    margin-bottom: 4px; /* Adds a small space between names */\r\n}\r\n\r\n@media (max-width: 768px) {\r\n    .columnBlockLayout {\r\n        flex-basis: 100%; /* Stack columns on smaller screens */\r\n    }\r\n}\r\n\r\n.team-title {\r\n    font-style: italic; /* This will italicize the text */\r\n    margin-bottom: 20px; /* Adds space below the title */\r\n}\r\n\r\n"
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>About</name>
+  <powerpagecomponenttype>2</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>952afb3b-80e6-4b06-a52b-d28155880003</powerpagesiteid>
+  </powerpagesiteid>
+  <powerpagesitelanguageid>
+    <powerpagesitelanguageid>acca8b8f-f1df-4fa3-b34c-1b670f82f4fa</powerpagesitelanguageid>
+  </powerpagesitelanguageid>
+  <searchcontent>&lt;div id="ijtlxp" data-component-theme="portalThemeColor7" class="row sectionBlockLayout" style="display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 15px;"&gt;&lt;/div&gt;
+&lt;div id="ial0k" class="row sectionBlockLayout text-left" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;"&gt;
+  &lt;div id="ioyc4" class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"&gt;
+    &lt;div id="ihxbf" class="col-md-6 columnBlockLayout" style="word-break: break-word; flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;"&gt;&lt;img alt="insiderestaurant" src="/insiderestaurant.jpg" id="iicxk" name="insiderestaurant.jpg" style="max-width: 100%; width: 100%; height: 679px; border-radius: 8px;" /&gt;&lt;/div&gt;
+    &lt;div id="ipnlh" class="col-md-6 columnBlockLayout" style="word-break: break-word; flex-grow: 1; display: flex; flex-direction: column; min-width: 300px;"&gt;
+      &lt;h2 id="i4hs2" style="text-align: left; color: var(--portalThemeColor8);"&gt;Our History&lt;/h2&gt;
+      &lt;p id="ixj1dj" style="color: var(--portalThemeColor8); text-align: left;"&gt;Founded in 2024 by four culinary visionaries - Alan Barragan, Markuss Mera Riera, Chris Leipold, and Anuli Edom - Ristorante Per Squadre brings the essence of Italian dining to the vibrant streets of Little Italy in New York City. Each founder's unique passion and expertise have woven together to create a truly authentic Italian experience, celebrating the rich flavors and traditions of Italy with a modern twist.&lt;br id="ifwhs8" /&gt;&lt;br id="ib4ozg" /&gt;Located at 123 Mulberry Street, our restaurant is a haven for those seeking a taste of Italy in the heart of NYC. Our menu features classic dishes made with locally sourced ingredients, each paired perfectly with selections from our extensive wine list, curated by co-founder and sommelier Markuss Mera Riera. From the ambience to the service, every detail at Ristorante Per Squadre is designed to transport our guests to the warmth and charm of Italian hospitality.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="itn37d" class="row sectionBlockLayout text-left" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;"&gt;
+  &lt;div id="izmh0t" class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"&gt;
+    &lt;div id="ifmc7y" class="col-md-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;"&gt;
+      &lt;h4 id="ilk2fj" style="text-align: center; color: var(--portalThemeColor8);"&gt;​&lt;i id="ixxrsc" aria-label='Text "Every dish at Ristorante Per Squadre is a masterpiece, crafted with such authenticity and passion, it&amp;apos;s like a culinary trip to Italy without leaving NYC. The ambiance just complements the food perfectly, making each visit a memorable experience." Press enter to edit' style="position: relative;"&gt;"Every dish at Ristorante Per Squadre is a masterpiece, crafted with such authenticity and passion, it's like a culinary trip to Italy without leaving NYC. The ambiance just complements the food perfectly, making each visit a memorable experience."&lt;/i&gt; &lt;br id="igjet" /&gt;- Giovanni Rossi, Food Critic&lt;/h4&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="i33wv5" class="row sectionBlockLayout text-left" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;"&gt;
+  &lt;div id="ivbl63" class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"&gt;
+    &lt;div id="if6wr" class="col-md-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;"&gt;
+      &lt;h2 id="i2qvif" style="text-align: center; color: var(--portalThemeColor8);"&gt;Meet our Team&lt;/h2&gt;
+      &lt;div id="ivbl63-2" class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"&gt;
+        &lt;div id="irepm" class="col-md-4 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;"&gt;
+          &lt;h3 id="imjhf" class="team-title" style="text-align: center; color: var(--portalThemeColor8);"&gt;Hosts &amp;amp; Servers&lt;/h3&gt;
+          &lt;p id="i4ozp" style="text-align: center; color: var(--portalThemeColor8);"&gt;Alan Barragan&lt;/p&gt;
+          &lt;p id="idhza" style="text-align: center; color: var(--portalThemeColor8);"&gt;Hunter Atkins&lt;/p&gt;
+          &lt;p id="ipcjt" style="text-align: center; color: var(--portalThemeColor8);"&gt;Bryan Zbojna&lt;/p&gt;
+          &lt;p id="i1b9ua" style="text-align: center; color: var(--portalThemeColor8);"&gt;Daniel Iriza&lt;/p&gt;
+          &lt;p id="i41nai" style="text-align: center; color: var(--portalThemeColor8);"&gt;Wesley Edwards&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div id="i81tur" class="col-md-4 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;"&gt;
+          &lt;h3 id="iurvsb" class="team-title" style="text-align: center; color: var(--portalThemeColor8);"&gt;Bartenders&lt;/h3&gt;
+          &lt;p id="imee8w" style="text-align: center; color: var(--portalThemeColor8);"&gt;Anuli Edom&lt;/p&gt;
+          &lt;p id="ifzoru" style="text-align: center; color: var(--portalThemeColor8);"&gt;Toni Moore&lt;/p&gt;
+          &lt;p id="i2pxbe" style="text-align: center; color: var(--portalThemeColor8);"&gt;Karl Enriquez&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div id="ie25v3" class="col-md-4 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;"&gt;
+          &lt;h3 id="iqmokl" class="team-title" style="text-align: center; color: var(--portalThemeColor8);"&gt;Kitchen Staff&lt;/h3&gt;
+          &lt;p id="irifzm" style="text-align: center; color: var(--portalThemeColor8);"&gt;Chris Leipold&lt;/p&gt;
+          &lt;p id="ii7xrg" style="text-align: center; color: var(--portalThemeColor8);"&gt;Ethan Wintill&lt;/p&gt;
+          &lt;p id="iwj8pf" style="text-align: center; color: var(--portalThemeColor8);"&gt;Bram Groen&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div id="ix25h6" class="col-md-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;"&gt;
+          &lt;h3 id="iyrpxd" class="team-title" style="text-align: center; color: var(--portalThemeColor8);"&gt;Managers&lt;/h3&gt;
+          &lt;p id="i8flfh" style="text-align: center; color: var(--portalThemeColor8);"&gt;Markuss Mera Riera&lt;/p&gt;
+          &lt;p id="isolel" style="text-align: center; color: var(--portalThemeColor8);"&gt;Carlos Urena Alvarez&lt;/p&gt;
+          &lt;p id="i8x0bj" style="text-align: center; color: var(--portalThemeColor8);"&gt;Kris Robinson&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+About</searchcontent>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

@@ -1,0 +1,37 @@
+<powerpagecomponent powerpagecomponentid="d2465438-c157-b685-3551-8933f92d7dda">
+  <content>{
+  "filecontent": null,
+  "displayorder": 8,
+  "customcss": "",
+  "customjavascript": "",
+  "pagetemplateid": "743c5dce-a9c6-4fb7-af78-cb92b4784e8a",
+  "parentpageid": "4550d6db-c76f-4336-88f3-6721dd508858",
+  "partialurl": "Menu-deleted",
+  "isroot": false,
+  "rootwebpageid": "e1af4463-e8bf-adf7-01df-95168462e37d",
+  "title": "Menu",
+  "summary": "&lt;p&gt;This is a sample landing page designed to be a starting point for your website&lt;/p&gt;",
+  "copy": "&lt;div id=\"il5se\" class=\"row sectionBlockLayout text-left\" style=\"display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;\"&gt;\n  &lt;div id=\"iwd3i\" class=\"container\" style=\"display: flex; flex-wrap: wrap;\"&gt;&lt;div id=\"ica7b\" class=\"col-md-12 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word; padding: 16px; margin: 60px 0px;\"&gt;&lt;/div&gt;&lt;/div&gt;\n&lt;/div&gt;\n",
+  "publishingstateid": "3fedcfd4-7ce7-48dd-a7da-4074395475b3",
+  "enablerating": false,
+  "enabletracking": false,
+  "excludefromsearch": false,
+  "hiddenfromsitemap": true,
+  "sharedpageconfiguration": false
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Menu-deleted</name>
+  <powerpagecomponenttype>2</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>952afb3b-80e6-4b06-a52b-d28155880003</powerpagesiteid>
+  </powerpagesiteid>
+  <powerpagesitelanguageid>
+    <powerpagesitelanguageid>acca8b8f-f1df-4fa3-b34c-1b670f82f4fa</powerpagesitelanguageid>
+  </powerpagesitelanguageid>
+  <searchcontent>Menu&lt;div id="il5se" class="row sectionBlockLayout text-left" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;"&gt;
+  &lt;div id="iwd3i" class="container" style="display: flex; flex-wrap: wrap;"&gt;&lt;div id="ica7b" class="col-md-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word; padding: 16px; margin: 60px 0px;"&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+Menu-deleted</searchcontent>
+  <statecode>1</statecode>
+  <statuscode>2</statuscode>
+</powerpagecomponent>

@@ -1,0 +1,64 @@
+<powerpagecomponent powerpagecomponentid="1dab3087-11dc-4573-9821-7354d1035c1a">
+  <content>{
+  "filecontent": null,
+  "copy": "&lt;div data-component-theme=\"portalThemeColor8\" id=\"ijw3f\" class=\"row sectionBlockLayout\" style='padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; min-height: 50%; background-image: url(\"/stuffed-pasta-near-vegetables-cheeseresized.jpg\"); background-position: center center; background-repeat: no-repeat; background-size: cover;'&gt;\n  &lt;div class=\"container\"&gt;\n    &lt;div id=\"iv3o7\" class=\"col-md-12 columnBlockLayout\" style=\"min-width: 250px; word-break: break-word; flex-grow: 1; display: flex; flex-direction: column; margin: 240px 0px;\"&gt;\n      &lt;h1 id=\"i6qzi\" style=\"text-align: center; color: var(--portalThemeColor1);\"&gt;Ristorante Per Squadre&lt;/h1&gt;\n      &lt;h4 id=\"in88i\" style=\"text-align: center; color: var(--portalThemeColor1);\"&gt;\n        ​&lt;i id=\"iovpj\" aria-label=\"Text Experience authentic Italian flavors perfected in our mothers' and grandmothers' kitchens. Indulge in cozy dishes from Mediterranean seafood to soul-warming pasta. Every bite is a tribute to family tradition. Press enter to edit\" style=\"position: relative;\"&gt;Experience authentic Italian flavors perfected in our mothers' and grandmothers' kitchens. Indulge in cozy dishes from Mediterranean seafood to soul-warming pasta. Every bite is a tribute to family tradition.&lt;br /&gt;&lt;br /&gt;&lt;/i&gt;\n      &lt;/h4&gt;\n      &lt;button onclick=\"window.location.href='/Menu/'\" type=\"button\" value=\"Menu\" id=\"i5jyt\" class=\"button1\" style=\"text-align: center; margin-left: auto; margin-right: auto;\"&gt;View our Menu&lt;/button&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n&lt;div data-component-theme=\"portalThemeColor7\" id=\"iipei\" class=\"row sectionBlockLayout text-left\" style=\"display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;\"&gt;\n  &lt;div id=\"it67f\" class=\"container\" style=\"padding: 0px; display: flex; flex-wrap: wrap;\"&gt;\n    &lt;div id=\"i9j8e\" class=\"col-md-6 columnBlockLayout\" style=\"word-break: break-word; flex-grow: 1; display: flex; flex-direction: column; min-width: 300px; justify-content: center;\"&gt;\n      &lt;h2 id=\"i0bsn\" style=\"text-align: center; color: var(--portalThemeColor1);\"&gt;About Us&lt;/h2&gt;\n      &lt;p id=\"ir0yk\" style=\"text-align: center; color: var(--portalThemeColor1);\"&gt;Ristorante Per Squadre is a family-owned Italian restaurant located in the heart of the city. We pride ourselves on serving authentic Italian dishes made with locally-sourced ingredients. Whether you're looking for a romantic dinner for two or a place to celebrate a special occasion, we have the perfect setting for you.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;\n      &lt;button onclick=\"window.location.href='/about/'\" type=\"button\" value=\"about\" id=\"i1g4ig\" class=\"button1\" style=\"margin-left: auto; margin-right: auto;\"&gt;Learn More&lt;/button&gt;\n    &lt;/div&gt;\n    &lt;div id=\"izxzpw\" class=\"col-md-6 columnBlockLayout\" style=\"word-break: break-word; flex-grow: 1; display: flex; flex-direction: column; min-width: 300px; justify-content: center;\"&gt;&lt;img src=\"/italianfood.jpg\" alt=\"italianfood\" name=\"italianfood.jpg\" id=\"izamu\" style=\"width: 156%; height: 347.52099999999996px; max-width: 100%; margin-left: auto; margin-right: auto;\" /&gt;&lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n&lt;div data-component-theme=\"portalThemeColor8\" id=\"ijvmh5\" class=\"row sectionBlockLayout text-left\" style=\"display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;\"&gt;\n  &lt;div id=\"i5ve0k\" class=\"container\" style=\"padding: 0px; display: flex; flex-wrap: wrap;\"&gt;\n    &lt;div id=\"ic73kn\" class=\"col-md-6 columnBlockLayout\" style=\"word-break: break-word; flex-grow: 1; display: flex; flex-direction: column; min-width: 300px; justify-content: center;\"&gt;&lt;img alt=\"spaghetti\" src=\"/spaghetti.jpg\" id=\"ik0wop\" name=\"spaghetti.jpg\" style=\"max-width: 100%; width: 100%; height: auto; border-radius: 8px; margin-left: 0; margin-right: auto;\" /&gt;&lt;/div&gt;\n    &lt;div id=\"iwj6qg\" class=\"col-md-6 columnBlockLayout\" style=\"word-break: break-word; flex-grow: 1; display: flex; flex-direction: column; min-width: 300px; justify-content: center;\"&gt;\n      &lt;h2 id=\"ivx35j\" style=\"text-align: left; color: var(--portalThemeColor1);\"&gt;Contact Us&lt;/h2&gt;\n      &lt;p id=\"i4dxlo\" style=\"text-align: left; color: var(--portalThemeColor1);\"&gt;Have a question or need more information? Get in touch with us using the contact information below. We're always here to assist you.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;\n      &lt;button onclick=\"window.location.href='/contact-us/'\" type=\"button\" value=\"contact-us\" id=\"i6lrcn\" class=\"button1\" style=\"margin-left: 0; margin-right: auto;\"&gt;Contact Us&lt;/button&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n",
+  "displayorder": 1,
+  "enablerating": false,
+  "enabletracking": false,
+  "excludefromsearch": false,
+  "feedbackpolicy": 756150005,
+  "hiddenfromsitemap": false,
+  "isroot": false,
+  "pagetemplateid": "086a120e-98f0-6437-43e1-23f906386485",
+  "partialurl": "/",
+  "publishingstateid": "3fedcfd4-7ce7-48dd-a7da-4074395475b3",
+  "rootwebpageid": "4550d6db-c76f-4336-88f3-6721dd508858",
+  "sharedpageconfiguration": false,
+  "summary": "&lt;p&gt;This is a sample landing page for you to start creating your website.&lt;/p&gt;\r\n",
+  "title": "Home",
+  "parentpageid": null
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Home</name>
+  <powerpagecomponenttype>2</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>952afb3b-80e6-4b06-a52b-d28155880003</powerpagesiteid>
+  </powerpagesiteid>
+  <powerpagesitelanguageid>
+    <powerpagesitelanguageid>acca8b8f-f1df-4fa3-b34c-1b670f82f4fa</powerpagesitelanguageid>
+  </powerpagesitelanguageid>
+  <searchcontent>Home&lt;div data-component-theme="portalThemeColor8" id="ijw3f" class="row sectionBlockLayout" style='padding: 8px; margin: 0px; display: flex; flex-wrap: wrap; min-height: 50%; background-image: url("/stuffed-pasta-near-vegetables-cheeseresized.jpg"); background-position: center center; background-repeat: no-repeat; background-size: cover;'&gt;
+  &lt;div class="container"&gt;
+    &lt;div id="iv3o7" class="col-md-12 columnBlockLayout" style="min-width: 250px; word-break: break-word; flex-grow: 1; display: flex; flex-direction: column; margin: 240px 0px;"&gt;
+      &lt;h1 id="i6qzi" style="text-align: center; color: var(--portalThemeColor1);"&gt;Ristorante Per Squadre&lt;/h1&gt;
+      &lt;h4 id="in88i" style="text-align: center; color: var(--portalThemeColor1);"&gt;
+        ​&lt;i id="iovpj" aria-label="Text Experience authentic Italian flavors perfected in our mothers' and grandmothers' kitchens. Indulge in cozy dishes from Mediterranean seafood to soul-warming pasta. Every bite is a tribute to family tradition. Press enter to edit" style="position: relative;"&gt;Experience authentic Italian flavors perfected in our mothers' and grandmothers' kitchens. Indulge in cozy dishes from Mediterranean seafood to soul-warming pasta. Every bite is a tribute to family tradition.&lt;br /&gt;&lt;br /&gt;&lt;/i&gt;
+      &lt;/h4&gt;
+      &lt;button onclick="window.location.href='/Menu/'" type="button" value="Menu" id="i5jyt" class="button1" style="text-align: center; margin-left: auto; margin-right: auto;"&gt;View our Menu&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div data-component-theme="portalThemeColor7" id="iipei" class="row sectionBlockLayout text-left" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;"&gt;
+  &lt;div id="it67f" class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"&gt;
+    &lt;div id="i9j8e" class="col-md-6 columnBlockLayout" style="word-break: break-word; flex-grow: 1; display: flex; flex-direction: column; min-width: 300px; justify-content: center;"&gt;
+      &lt;h2 id="i0bsn" style="text-align: center; color: var(--portalThemeColor1);"&gt;About Us&lt;/h2&gt;
+      &lt;p id="ir0yk" style="text-align: center; color: var(--portalThemeColor1);"&gt;Ristorante Per Squadre is a family-owned Italian restaurant located in the heart of the city. We pride ourselves on serving authentic Italian dishes made with locally-sourced ingredients. Whether you're looking for a romantic dinner for two or a place to celebrate a special occasion, we have the perfect setting for you.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+      &lt;button onclick="window.location.href='/about/'" type="button" value="about" id="i1g4ig" class="button1" style="margin-left: auto; margin-right: auto;"&gt;Learn More&lt;/button&gt;
+    &lt;/div&gt;
+    &lt;div id="izxzpw" class="col-md-6 columnBlockLayout" style="word-break: break-word; flex-grow: 1; display: flex; flex-direction: column; min-width: 300px; justify-content: center;"&gt;&lt;img src="/italianfood.jpg" alt="italianfood" name="italianfood.jpg" id="izamu" style="width: 156%; height: 347.52099999999996px; max-width: 100%; margin-left: auto; margin-right: auto;" /&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div data-component-theme="portalThemeColor8" id="ijvmh5" class="row sectionBlockLayout text-left" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;"&gt;
+  &lt;div id="i5ve0k" class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"&gt;
+    &lt;div id="ic73kn" class="col-md-6 columnBlockLayout" style="word-break: break-word; flex-grow: 1; display: flex; flex-direction: column; min-width: 300px; justify-content: center;"&gt;&lt;img alt="spaghetti" src="/spaghetti.jpg" id="ik0wop" name="spaghetti.jpg" style="max-width: 100%; width: 100%; height: auto; border-radius: 8px; margin-left: 0; margin-right: auto;" /&gt;&lt;/div&gt;
+    &lt;div id="iwj6qg" class="col-md-6 columnBlockLayout" style="word-break: break-word; flex-grow: 1; display: flex; flex-direction: column; min-width: 300px; justify-content: center;"&gt;
+      &lt;h2 id="ivx35j" style="text-align: left; color: var(--portalThemeColor1);"&gt;Contact Us&lt;/h2&gt;
+      &lt;p id="i4dxlo" style="text-align: left; color: var(--portalThemeColor1);"&gt;Have a question or need more information? Get in touch with us using the contact information below. We're always here to assist you.&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+      &lt;button onclick="window.location.href='/contact-us/'" type="button" value="contact-us" id="i6lrcn" class="button1" style="margin-left: 0; margin-right: auto;"&gt;Contact Us&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+Home</searchcontent>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

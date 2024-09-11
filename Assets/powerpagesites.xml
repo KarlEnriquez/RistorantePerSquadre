@@ -1,0 +1,10 @@
+<powerpagesites>
+  <powerpagesite powerpagesiteid="952afb3b-80e6-4b06-a52b-d28155880003">
+    <content>{"defaultlanguage":"acca8b8f-f1df-4fa3-b34c-1b670f82f4fa","footerwebtemplateid":"6d35485a-fabf-4933-a7eb-900e1a031ade","headerwebtemplateid":"d69392c2-e3c6-4c34-ba70-e6a1001c231e","website_language":1033}</content>
+    <datamodelversion>2.0</datamodelversion>
+    <iscustomizable>1</iscustomizable>
+    <name>Ristorante Per Squadre</name>
+    <statecode>0</statecode>
+    <statuscode>1</statuscode>
+  </powerpagesite>
+</powerpagesites>

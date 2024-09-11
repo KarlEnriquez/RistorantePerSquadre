@@ -1,0 +1,25 @@
+function setOrderIDFromURL(executionContext) {
+  var formContext = executionContext.getFormContext();
+  var queryParam = new URLSearchParams(window.location.search);
+  var orderId = queryParam.get("rps_orderid");
+
+  if (orderId) {
+    Xrm.WebApi.retrieveRecord("rps_order", orderId, "?$select=rps_Name").then(
+      function success(result) {
+        var orderName = result.rps_name;
+
+        var orderLookUpValue = [];
+        orderLookUpValue.push({
+          id: orderId,
+          name: orderName,
+          entityType: "crf19_ristorantefeedback",
+        });
+
+        formContext.getAttribute("rps_OrderId").setValue(orderLookUpValue);
+      },
+      function (error) {
+        console.log(error.message);
+      }
+    );
+  }
+}

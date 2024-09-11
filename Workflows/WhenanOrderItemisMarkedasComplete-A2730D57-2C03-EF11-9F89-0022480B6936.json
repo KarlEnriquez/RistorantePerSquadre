@@ -1,0 +1,241 @@
+{
+  "properties": {
+    "connectionReferences": {
+      "shared_commondataserviceforapps": {
+        "api": {
+          "name": "shared_commondataserviceforapps"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "rps_sharedcommondataserviceforapps_8e7d9"
+        },
+        "runtimeSource": "embedded"
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "triggers": {
+        "When_a_row_is_added,_modified_or_deleted": {
+          "type": "OpenApiConnectionWebhook",
+          "inputs": {
+            "parameters": {
+              "subscriptionRequest/message": 7,
+              "subscriptionRequest/entityname": "rps_orderitems",
+              "subscriptionRequest/scope": 4,
+              "subscriptionRequest/filteringattributes": "rps_orderitemstatus"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "SubscribeWebhookTrigger",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "metadata": {
+            "operationMetadataId": "2ace33bb-66df-404c-aaf6-d2514fb561c4"
+          }
+        }
+      },
+      "actions": {
+        "Get_Order_Items": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "rps_orderitemses",
+              "$filter": "_rps_orderid_value eq @{triggerBody()?['_rps_orderid_value']}"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "ListRecords",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {
+            "Get_Relevant_Order": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "d09e5f6e-631f-4067-90f1-c560ea0bac58"
+          }
+        },
+        "For_each_Order_Item": {
+          "type": "Foreach",
+          "foreach": "@outputs('Get_Order_Items')?['body/value']",
+          "actions": {
+            "Check_Order_Item_Status": {
+              "type": "If",
+              "expression": {
+                "and": [
+                  {
+                    "equals": [
+                      "@items('For_each_Order_Item')?['rps_orderitemstatus']",
+                      0
+                    ]
+                  }
+                ]
+              },
+              "actions": {
+                "OrderComplete_=_false": {
+                  "type": "SetVariable",
+                  "inputs": {
+                    "name": "OrderComplete",
+                    "value": false
+                  },
+                  "metadata": {
+                    "operationMetadataId": "f37aef84-82e1-4c46-a065-9c6e2c01133e"
+                  }
+                }
+              },
+              "else": {
+                "actions": {}
+              },
+              "metadata": {
+                "operationMetadataId": "86c09d30-b6fd-46fd-9b0f-3905282496cb"
+              }
+            }
+          },
+          "runAfter": {
+            "OrderComplete_=_true": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "4f58362f-4bf9-4576-a012-0c7104c455ce"
+          }
+        },
+        "OrderComplete_=_true": {
+          "type": "InitializeVariable",
+          "inputs": {
+            "variables": [
+              {
+                "name": "OrderComplete",
+                "type": "boolean",
+                "value": true
+              }
+            ]
+          },
+          "runAfter": {
+            "Get_Order_Items": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "6cc164e7-cc23-47cb-b01f-1c43cc6faa0f"
+          }
+        },
+        "if_OrderComplete": {
+          "type": "If",
+          "expression": {
+            "equals": [
+              "@variables('OrderComplete')",
+              true
+            ]
+          },
+          "actions": {
+            "If_Already_Complete": {
+              "type": "If",
+              "expression": {
+                "and": [
+                  {
+                    "equals": [
+                      "@body('Get_Relevant_Order')?['rps_preparationstatus']",
+                      2
+                    ]
+                  }
+                ]
+              },
+              "actions": {
+                "Terminate": {
+                  "type": "Terminate",
+                  "inputs": {
+                    "runStatus": "Cancelled"
+                  }
+                }
+              },
+              "else": {
+                "actions": {
+                  "Set_Order_Status_to_Complete": {
+                    "type": "OpenApiConnection",
+                    "inputs": {
+                      "parameters": {
+                        "entityName": "rps_orders",
+                        "recordId": "@triggerOutputs()?['body/_rps_orderid_value']",
+                        "item/rps_preparationstatus": 2
+                      },
+                      "host": {
+                        "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                        "operationId": "UpdateRecord",
+                        "connectionName": "shared_commondataserviceforapps"
+                      }
+                    },
+                    "metadata": {
+                      "operationMetadataId": "366f7c62-64e9-4359-b992-55e02c046eb1"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "else": {
+            "actions": {
+              "Set_Order_Status_to_Recieved": {
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "parameters": {
+                    "entityName": "rps_orders",
+                    "recordId": "@triggerOutputs()?['body/_rps_orderid_value']",
+                    "item/rps_preparationstatus": 1
+                  },
+                  "host": {
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+                    "operationId": "UpdateRecord",
+                    "connectionName": "shared_commondataserviceforapps"
+                  }
+                },
+                "metadata": {
+                  "operationMetadataId": "366f7c62-64e9-4359-b992-55e02c046eb1"
+                }
+              }
+            }
+          },
+          "runAfter": {
+            "For_each_Order_Item": [
+              "Succeeded"
+            ]
+          },
+          "metadata": {
+            "operationMetadataId": "2695906a-edd1-4eb4-856b-8949bbd6eba1"
+          }
+        },
+        "Get_Relevant_Order": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "entityName": "rps_orders",
+              "recordId": "@triggerBody()?['_rps_orderid_value']",
+              "$select": "rps_preparationstatus"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps",
+              "operationId": "GetItem",
+              "connectionName": "shared_commondataserviceforapps"
+            }
+          },
+          "runAfter": {}
+        }
+      }
+    },
+    "templateName": null
+  },
+  "schemaVersion": "1.0.0.0"
+}

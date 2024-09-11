@@ -1,0 +1,31 @@
+<powerpagecomponent powerpagecomponentid="32f326da-cfc2-4dff-8564-e0ec54a2dfed">
+  <content>{
+  "entityname": "Menu",
+  "entitylogicalname": "crf19_menu",
+  "scope": 756150000,
+  "append": false,
+  "appendto": false,
+  "delete": false,
+  "read": true,
+  "create": false,
+  "write": false,
+  "parentrelationship": null,
+  "parententitypermission": null,
+  "contactrelationship": null,
+  "accountrelationship": null,
+  "childTablePermissions": [],
+  "adx_entitypermission_webrole": [
+    "5107d513-f205-46e2-827d-d5f25d472a7f",
+    "f6fab150-1ff8-4604-81f3-d6fd5243cdac",
+    "d02af7aa-0f23-4357-9968-fa93b84720d9"
+  ]
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Menu</name>
+  <powerpagecomponenttype>18</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>952afb3b-80e6-4b06-a52b-d28155880003</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

@@ -1,0 +1,30 @@
+<powerpagecomponent powerpagecomponentid="e1af4463-e8bf-adf7-01df-95168462e37d">
+  <content>{
+  "filecontent": null,
+  "displayorder": 8,
+  "customcss": "",
+  "customjavascript": "",
+  "pagetemplateid": "743c5dce-a9c6-4fb7-af78-cb92b4784e8a",
+  "parentpageid": "4550d6db-c76f-4336-88f3-6721dd508858",
+  "partialurl": "Menu-deleted",
+  "isroot": true,
+  "title": "Menu",
+  "summary": "&lt;p&gt;This is a sample landing page designed to be a starting point for your website&lt;/p&gt;",
+  "copy": "",
+  "publishingstateid": "3fedcfd4-7ce7-48dd-a7da-4074395475b3",
+  "enablerating": false,
+  "enabletracking": false,
+  "excludefromsearch": false,
+  "hiddenfromsitemap": true,
+  "sharedpageconfiguration": false
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Menu-deleted</name>
+  <powerpagecomponenttype>2</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>952afb3b-80e6-4b06-a52b-d28155880003</powerpagesiteid>
+  </powerpagesiteid>
+  <searchcontent>MenuMenu-deleted</searchcontent>
+  <statecode>1</statecode>
+  <statuscode>2</statuscode>
+</powerpagecomponent>

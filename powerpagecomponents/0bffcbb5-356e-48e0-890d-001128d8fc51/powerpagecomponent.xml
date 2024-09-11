@@ -1,0 +1,11 @@
+<powerpagecomponent powerpagecomponentid="0bffcbb5-356e-48e0-890d-001128d8fc51">
+  <content>{"value":"sharepoint.com;microsoftonline.com"}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>OnlineDomains</name>
+  <powerpagecomponenttype>9</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>952afb3b-80e6-4b06-a52b-d28155880003</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

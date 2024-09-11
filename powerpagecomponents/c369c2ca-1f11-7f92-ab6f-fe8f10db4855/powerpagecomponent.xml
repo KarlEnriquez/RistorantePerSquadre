@@ -1,0 +1,45 @@
+<powerpagecomponent powerpagecomponentid="c369c2ca-1f11-7f92-ab6f-fe8f10db4855">
+  <content>{
+  "filecontent": null,
+  "displayorder": 7,
+  "pagetemplateid": "086a120e-98f0-6437-43e1-23f906386485",
+  "parentpageid": "4550d6db-c76f-4336-88f3-6721dd508858",
+  "partialurl": "Hours-and-Location",
+  "isroot": false,
+  "rootwebpageid": "64af1d71-d6e6-708e-2b04-5de659cdc8d6",
+  "title": "Hours and Location",
+  "summary": "&lt;p&gt;This is a sample landing page designed to be a starting point for your website&lt;/p&gt;",
+  "copy": "&lt;div id=\"ijkl6j\" data-component-theme=\"portalThemeColor7\" class=\"row sectionBlockLayout\" style=\"display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 15px;\"&gt;&lt;/div&gt;\n&lt;div id=\"i3nf0h\" data-component-theme=\"portalThemeColor1\" class=\"row sectionBlockLayout text-left\" style=\"display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;\"&gt;\n  &lt;div id=\"iaw3r9\" class=\"container\" style=\"padding: 0px; display: flex; flex-wrap: wrap;\"&gt;\n    &lt;div id=\"i5uf0t\" class=\"col-md-12 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;\"&gt;\n      &lt;h2 id=\"iltm2v\" style=\"text-align: center;\"&gt;Open Hours&lt;/h2&gt;\n      &lt;p id=\"ia8oq7\" style=\"text-align: center;\"&gt;Monday - Thursday: 11am - 10pm &lt;br id=\"i2qkl\" /&gt;Friday - Saturday: 11am - 11pm &lt;br id=\"idsxl\" /&gt;Sunday: 12pm - 9pm&lt;/p&gt;\n      &lt;h2 id=\"i2kv1g\" style=\"text-align: center;\"&gt;Location&lt;/h2&gt;\n      &lt;iframe frameborder=\"0\" src=\"https://widgets.commoninja.com/iframe/cc9011b3-1c45-450f-9364-01a61c85439c\" width=\"100%\" height=\"100%\" scrolling=\"no\" id=\"ie8xm-2\" style=\"max-width: 100%; margin-left: 0; margin-right: auto; min-height: 800px;\"&gt;&lt;/iframe&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n&lt;div id=\"io91ms\" data-component-theme=\"portalThemeColor7\" class=\"row sectionBlockLayout\" style=\"display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 15px;\"&gt;&lt;/div&gt;\n",
+  "publishingstateid": "3fedcfd4-7ce7-48dd-a7da-4074395475b3",
+  "enablerating": false,
+  "enabletracking": false,
+  "excludefromsearch": false,
+  "hiddenfromsitemap": true,
+  "sharedpageconfiguration": false,
+  "feedbackpolicy": 756150000
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Hours and Location</name>
+  <powerpagecomponenttype>2</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>952afb3b-80e6-4b06-a52b-d28155880003</powerpagesiteid>
+  </powerpagesiteid>
+  <powerpagesitelanguageid>
+    <powerpagesitelanguageid>acca8b8f-f1df-4fa3-b34c-1b670f82f4fa</powerpagesitelanguageid>
+  </powerpagesitelanguageid>
+  <searchcontent>Hours and Location&lt;div id="ijkl6j" data-component-theme="portalThemeColor7" class="row sectionBlockLayout" style="display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 15px;"&gt;&lt;/div&gt;
+&lt;div id="i3nf0h" data-component-theme="portalThemeColor1" class="row sectionBlockLayout text-left" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;"&gt;
+  &lt;div id="iaw3r9" class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"&gt;
+    &lt;div id="i5uf0t" class="col-md-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;"&gt;
+      &lt;h2 id="iltm2v" style="text-align: center;"&gt;Open Hours&lt;/h2&gt;
+      &lt;p id="ia8oq7" style="text-align: center;"&gt;Monday - Thursday: 11am - 10pm &lt;br id="i2qkl" /&gt;Friday - Saturday: 11am - 11pm &lt;br id="idsxl" /&gt;Sunday: 12pm - 9pm&lt;/p&gt;
+      &lt;h2 id="i2kv1g" style="text-align: center;"&gt;Location&lt;/h2&gt;
+      &lt;iframe frameborder="0" src="https://widgets.commoninja.com/iframe/cc9011b3-1c45-450f-9364-01a61c85439c" width="100%" height="100%" scrolling="no" id="ie8xm-2" style="max-width: 100%; margin-left: 0; margin-right: auto; min-height: 800px;"&gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="io91ms" data-component-theme="portalThemeColor7" class="row sectionBlockLayout" style="display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 15px;"&gt;&lt;/div&gt;
+Hours and Location</searchcontent>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

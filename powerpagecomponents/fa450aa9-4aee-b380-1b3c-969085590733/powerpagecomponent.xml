@@ -1,0 +1,23 @@
+<powerpagecomponent powerpagecomponentid="fa450aa9-4aee-b380-1b3c-969085590733">
+  <content>{
+  "filecontent": null,
+  "displayorder": 6,
+  "parentweblinkid": null,
+  "weblinksetid": "b03b65ce-4644-49a1-934a-adb765c239c5",
+  "pageid": "64af1d71-d6e6-708e-2b04-5de659cdc8d6",
+  "publishingstateid": "3fedcfd4-7ce7-48dd-a7da-4074395475b3",
+  "displaypagevalidation": false,
+  "displayimageonly": false,
+  "displaypagechildlinks": false,
+  "openinnewwindow": false,
+  "robotsfollowlink": true
+}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Hours and Location</name>
+  <powerpagecomponenttype>5</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>952afb3b-80e6-4b06-a52b-d28155880003</powerpagesiteid>
+  </powerpagesiteid>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>

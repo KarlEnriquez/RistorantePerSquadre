@@ -1,0 +1,235 @@
+<powerpagecomponent powerpagecomponentid="8a9afca8-5c45-97b9-9cde-fc4b62276ef1">
+  <content>{"filecontent":null,"displayorder":7,"pagetemplateid":"086a120e-98f0-6437-43e1-23f906386485","parentpageid":"4550d6db-c76f-4336-88f3-6721dd508858","partialurl":"Menu-deleted","isroot":false,"rootwebpageid":"5935a931-41ea-2946-9174-19302a8a4869","title":"Menu","summary":"&lt;p&gt;This is a sample landing page designed to be a starting point for your website&lt;/p&gt;","copy":"&lt;div data-component-theme=\"portalThemeColor8\" id=\"igyif\" class=\"row sectionBlockLayout\" style=\"display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: auto;\"&gt;&lt;/div&gt;\n&lt;div id=\"ip09w\" data-component-theme=\"portalThemeColor7\" class=\"row sectionBlockLayout\" style=\"display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: auto;\"&gt;\n  &lt;div class=\"container\"&gt;\n    &lt;div id=\"i9f6t\" class=\"col-md-12 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;\"&gt;\n      &lt;h2 id=\"iovqi\" style=\"background-color: #541212;\"&gt;Welcome to Ristorante Per Squadre&lt;/h2&gt;\n      &lt;p id=\"iruml\"&gt;Experience the finest Italian cuisine in a warm and inviting atmosphere at Ristorante Per Squadre. Our menu features a variety of authentic Italian dishes made with the freshest ingredients. We use traditional family recipes handed down from our parents and grandparents and use locally-sourced ingredients where possible. Mangiamo! &lt;/p&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n&lt;div id=\"ijn2qq\" data-component-theme=\"portalThemeColor8\" class=\"row sectionBlockLayout\" style=\"display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 15px;\"&gt;&lt;/div&gt;\n&lt;div id=\"iu4lq7\" class=\"row sectionBlockLayout\" style=\"display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 30px;\"&gt;&lt;/div&gt;\n&lt;div id=\"i3izyw\" data-component-theme=\"portalThemeColor1\" class=\"row sectionBlockLayout text-left\" style=\"display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 0px;\"&gt;\n  &lt;div id=\"i1rokd\" class=\"container\" style=\"padding: 0px; display: flex; flex-wrap: wrap;\"&gt;\n    &lt;div id=\"id08k\" class=\"col-md-12 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;\"&gt;\n      &lt;h1 id=\"izolef\" style=\"text-align: center; border: 0 solid #c8c6c4; max-width: 100%; margin: 10px 10px 10px 10px; padding: 10px 10px 10px 10px; font-weight: 700; letter-spacing: 10px; box-shadow: 0px 0px 0px #000000; text-shadow: 0px 0px 0px #000000;\"&gt;SALADS&lt;br id=\"irdqy\" /&gt;&lt;/h1&gt;\n     {% fetchxml sald %}\n     &lt;fetch top=\"50\"&gt;\n      &lt;entity name=\"crf19_menu\"&gt;\n        &lt;attribute name=\"crf19_category\" /&gt;\n        &lt;attribute name=\"crf19_description\" /&gt;\n        &lt;attribute name=\"crf19_name\" /&gt;\n        &lt;attribute name=\"crf19_price\" /&gt;\n        &lt;filter&gt;\n          &lt;condition attribute=\"crf19_category\" operator=\"eq\" value=\"312850005\" /&gt;\n        &lt;/filter&gt;\n      &lt;/entity&gt;\n    &lt;/fetch&gt;\n     {% endfetchxml %}\n     &lt;table style=\"width:100%\" class=\"table\"&gt;\n      {% for result in sald.results.entities %}\n    &lt;tr class=\"row\"&gt;\n      &lt;div class=\"item\"&gt;\n      &lt;td class=\"itemName\"&gt; {{ result.crf19_name }}&lt;/td&gt;\n      &lt;td class=\"itemDesc\"&gt; {{ result.crf19_description }}&lt;/td&gt;\n      &lt;/div&gt;\n      &lt;td class=\"itemPrice\"&gt; {{ result.crf19_price | decimals: 2, \"en-US\" | prepend: \"$\"}}&lt;/td&gt;\n    &lt;/tr&gt;\n    \n    {% endfor %}\n    \n    &lt;/table&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n\n\n&lt;div id=\"appdiv\" class=\"row sectionBlockLayout\" style=\"display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 30px;\"&gt;&lt;/div&gt;\n&lt;div id=\"i3izyw\" data-component-theme=\"portalThemeColor1\" class=\"row sectionBlockLayout text-left\" style=\"display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 0px;\"&gt;\n  &lt;div id=\"i1rokd\" class=\"container\" style=\"padding: 0px; display: flex; flex-wrap: wrap;\"&gt;\n    &lt;div id=\"id08k\" class=\"col-md-12 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;\"&gt;\n      &lt;h1 id=\"izolef\" style=\"text-align: center; border: 0 solid #c8c6c4; max-width: 100%; margin: 10px 10px 10px 10px; padding: 10px 10px 10px 10px; font-weight: 700; letter-spacing: 10px; box-shadow: 0px 0px 0px #000000; text-shadow: 0px 0px 0px #000000;\"&gt;APPETIZERS&lt;br id=\"irdqy\" /&gt;&lt;/h1&gt;\n     {% fetchxml apps %}\n     &lt;fetch top=\"50\"&gt;\n      &lt;entity name=\"crf19_menu\"&gt;\n        &lt;attribute name=\"crf19_category\" /&gt;\n        &lt;attribute name=\"crf19_description\" /&gt;\n        &lt;attribute name=\"crf19_name\" /&gt;\n        &lt;attribute name=\"crf19_price\" /&gt;\n        &lt;filter&gt;\n          &lt;condition attribute=\"crf19_category\" operator=\"eq\" value=\"312850003\" /&gt;\n        &lt;/filter&gt;\n      &lt;/entity&gt;\n    &lt;/fetch&gt;\n     {% endfetchxml %}\n     &lt;table style=\"width:100%\" class=\"table\"&gt;\n      {% for result in apps.results.entities %}\n    &lt;tr class=\"row\"&gt;\n      &lt;div class=\"item\"&gt;\n      &lt;td class=\"itemName\"&gt; {{ result.crf19_name }}&lt;/td&gt;\n      &lt;td class=\"itemDesc\"&gt; {{ result.crf19_description }}&lt;/td&gt;\n      &lt;/div&gt;\n      &lt;td class=\"itemPrice\"&gt; {{ result.crf19_price | decimals: 2, \"en-US\" | prepend: \"$\"}}&lt;/td&gt;\n    &lt;/tr&gt;\n    \n    {% endfor %}\n    \n    &lt;/table&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n\n&lt;div id=\"ikcor6\" class=\"row sectionBlockLayout\" style=\"display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 30px;\"&gt;&lt;/div&gt;\n&lt;div id=\"iqo038\" data-component-theme=\"portalThemeColor1\" class=\"row sectionBlockLayout text-left\" style=\"display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;\"&gt;\n  &lt;div id=\"i6ogd2\" class=\"container\" style=\"padding: 0px; display: flex; flex-wrap: wrap;\"&gt;\n    &lt;div id=\"isc6l\" class=\"col-md-12 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;\"&gt;\n      &lt;h1 id=\"ipoupl\" style=\"text-align: center; margin: 10px 10px 10px 10px; padding: 10px 10px 10px 10px; background-color: rgba(0, 0, 0, 0); letter-spacing: 10px; font-weight: 700;\"&gt;ENTREES&lt;/h1&gt;\n      {% fetchxml xxxx %}\n      &lt;fetch top=\"50\"&gt;\n        &lt;entity name=\"crf19_menu\"&gt;\n          &lt;attribute name=\"crf19_category\" /&gt;\n          &lt;attribute name=\"crf19_description\" /&gt;\n          &lt;attribute name=\"crf19_name\" /&gt;\n          &lt;attribute name=\"crf19_price\" /&gt;\n          &lt;filter&gt;\n            &lt;condition attribute=\"crf19_category\" operator=\"eq\" value=\"312850000\" /&gt;\n          &lt;/filter&gt;\n        &lt;/entity&gt;\n      &lt;/fetch&gt;\n      {% endfetchxml %}\n\n     \n      &lt;table style=\"width:100%\" class=\"table\"&gt;\n        {% for result in xxxx.results.entities %}\n      &lt;tr class=\"row\"&gt;\n        &lt;td class=\"itemName\"&gt; {{ result.crf19_name }}&lt;/td&gt;\n        &lt;td class=\"itemDesc\"&gt; {{ result.crf19_description }}&lt;/td&gt;\n        &lt;td class=\"itemPrice\"&gt; {{ result.crf19_price | decimals: 2, \"en-US\" | prepend: \"$\" }}&lt;/td&gt;\n      &lt;/tr&gt;\n      \n      {% endfor %}\n      \n      &lt;/table&gt;\n     \n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n&lt;div id=\"iyqret\" class=\"row sectionBlockLayout\" style=\"display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 30px;\"&gt;&lt;/div&gt;\n&lt;div id=\"im4xj1\" data-component-theme=\"portalThemeColor1\" class=\"row sectionBlockLayout text-left\" style=\"display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;\"&gt;\n  &lt;div id=\"i9tsar\" class=\"container\" style=\"padding: 0px; display: flex; flex-wrap: wrap;\"&gt;\n    &lt;div id=\"i2boi\" class=\"col-md-12 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;\"&gt;\n      &lt;h1 id=\"iz0jvs\" style=\"text-align: center; color: var(--portalThemeColor8); letter-spacing: 10px; font-weight: 700;\"&gt;SIDES&amp;nbsp;&lt;/h1&gt;\n      {% fetchxml side %}\n      &lt;fetch top=\"50\"&gt;\n        &lt;entity name=\"crf19_menu\"&gt;\n          &lt;attribute name=\"crf19_category\" /&gt;\n          &lt;attribute name=\"crf19_description\" /&gt;\n          &lt;attribute name=\"crf19_name\" /&gt;\n          &lt;attribute name=\"crf19_price\" /&gt;\n          &lt;filter&gt;\n            &lt;condition attribute=\"crf19_category\" operator=\"eq\" value=\"312850002\" /&gt;\n          &lt;/filter&gt;\n          \n        &lt;/entity&gt;\n      &lt;/fetch&gt;\n\n      {% endfetchxml %}\n      &lt;table style=\"width:100%\" class=\"table\"&gt;\n        {% for result in side.results.entities %}\n      &lt;tr class=\"row\"&gt;\n        &lt;div class=\"item\"&gt;\n        &lt;td class=\"itemName\"&gt; {{ result.crf19_name }}&lt;/td&gt;\n        &lt;td class=\"itemDesc\"&gt; {{ result.crf19_description }}&lt;/td&gt;\n      &lt;/div&gt;\n        &lt;td class=\"itemPrice\"&gt; {{ result.crf19_price | decimals: 2, \"en-US\" | prepend: \"$\"}}&lt;/td&gt;\n      &lt;/tr&gt;\n      \n      {% endfor %}\n      \n      &lt;/table&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n&lt;div id=\"iloscw\" class=\"row sectionBlockLayout\" style=\"display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 30px;\"&gt;&lt;/div&gt;\n&lt;div id=\"ipnkve\" data-component-theme=\"portalThemeColor1\" class=\"row sectionBlockLayout text-left\" style=\"display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;\"&gt;\n  &lt;div id=\"ikcrlz\" class=\"container\" style=\"padding: 0px; display: flex; flex-wrap: wrap;\"&gt;\n    &lt;div id=\"ig05yq\" class=\"col-md-12 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;\"&gt;\n      &lt;h1 id=\"iyjz9n\" style=\"text-align: center; color: var(--portalThemeColor8); background-color: rgba(139, 154, 70, 0); letter-spacing: 10px; font-weight: 700;\"&gt;DESSERTS&lt;/h1&gt;\n      {% fetchxml dess %}\n      &lt;fetch top=\"50\"&gt;\n        &lt;entity name=\"crf19_menu\"&gt;\n          &lt;attribute name=\"crf19_category\" /&gt;\n          &lt;attribute name=\"crf19_description\" /&gt;\n          &lt;attribute name=\"crf19_name\" /&gt;\n          &lt;attribute name=\"crf19_price\" /&gt;\n          &lt;filter&gt;\n            &lt;condition attribute=\"crf19_category\" operator=\"eq\" value=\"312850004\" /&gt;\n          &lt;/filter&gt;\n        &lt;/entity&gt;\n      &lt;/fetch&gt;\n      {% endfetchxml %}\n      &lt;table style=\"width:100%\" class=\"table\"&gt;\n        {% for result in dess.results.entities %}\n      &lt;tr class=\"row\"&gt;\n        &lt;td class=\"itemName\"&gt; {{ result.crf19_name }}&lt;/td&gt;\n        &lt;td class=\"itemDesc\"&gt; {{ result.crf19_description }}&lt;/td&gt;\n        &lt;td class=\"itemPrice\"&gt; {{ result.crf19_price | decimals: 2, \"en-US\" | prepend: \"$\" }}&lt;/td&gt;\n      &lt;/tr&gt;\n      \n      {% endfor %}\n      \n      &lt;/table&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n&lt;div id=\"isym2e\" data-component-theme=\"portalThemeColor7\" class=\"row sectionBlockLayout\" style=\"display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 30px;\"&gt;&lt;/div&gt;\n&lt;div id=\"ia8uax\" data-component-theme=\"portalThemeColor1\" class=\"row sectionBlockLayout text-left\" style=\"display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;\"&gt;\n  &lt;div id=\"if8h42\" class=\"container\" style=\"padding: 0px; display: flex; flex-wrap: wrap;\"&gt;\n    &lt;div id=\"iexfdc\" class=\"col-md-12 columnBlockLayout\" style=\"flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;\"&gt;\n      &lt;h1 id=\"iud5kj\" style=\"text-align: center; color: var(--portalThemeColor8); letter-spacing: 10px; font-weight: 700;\"&gt;DRINKS&lt;/h1&gt;\n      {% fetchxml bevs %}\n      &lt;fetch top=\"50\"&gt;\n        &lt;entity name=\"crf19_menu\"&gt;\n          &lt;attribute name=\"crf19_category\" /&gt;\n          &lt;attribute name=\"crf19_description\" /&gt;\n          &lt;attribute name=\"crf19_name\" /&gt;\n          &lt;attribute name=\"crf19_price\" /&gt;\n          &lt;filter&gt;\n            &lt;condition attribute=\"crf19_category\" operator=\"eq\" value=\"312850001\" /&gt;\n          &lt;/filter&gt;\n        &lt;/entity&gt;\n      &lt;/fetch&gt;\n      {% endfetchxml %}\n      &lt;table style=\"width:100%\" class=\"table\"&gt;\n        {% for result in bevs.results.entities %}\n      &lt;tr class=\"row\"&gt;\n        &lt;div class=\"item\"&gt;\n        &lt;td class=\"itemName\"&gt; {{ result.crf19_name }}&lt;/td&gt;\n       \n        &lt;td class=\"itemPrice\"&gt; {{ result.crf19_price | decimals: 2, \"en-US\" | prepend: \"$\"}}&lt;/td&gt;\n      &lt;/div&gt;\n      &lt;/tr&gt;\n      \n      {% endfor %}\n      \n      &lt;/table&gt;\n    &lt;/div&gt;\n  &lt;/div&gt;\n&lt;/div&gt;\n&lt;div id=\"in8dur\" class=\"row sectionBlockLayout\" style=\"display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 30px;\"&gt;&lt;/div&gt;\n\n  ","publishingstateid":"3fedcfd4-7ce7-48dd-a7da-4074395475b3","enablerating":false,"enabletracking":false,"excludefromsearch":false,"hiddenfromsitemap":true,"sharedpageconfiguration":false,"feedbackpolicy":756150000,"customcss":".table {\n    background-color: #EEEEEE;\n    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;\n    color: #541212;\n    font-size: larger;\n    font-weight: normal;\n    border-bottom: none;\n    margin-top: 10px;\n    margin-bottom: 4px;\n    border: none;\n    table-layout: fixed;\n    width: 100%;\n} \n.row {\n    border: none;\n   \n    \n    \n\n}\n.item {\n   border: none;\n   \n    \n\n}\n\n.itemName {\n \n    border: none;\n    width: 30%;\n    word-break:keep-all;\n\n}\n.itemDesc {\n   \n    font-style: italic;\n    font-weight: normal;\n    padding-right: 0px;\n    width: 50%;\n\n}\n.itemPrice {\n    \n    \n    font-weight: normal;\n    padding-left: 100px;\n    white-space: nowrap;\n    width: 20%;\n\n}\n#iovqi {\n    color: #EEEEEE;\n    text-align: center;\n    padding-bottom: 6px;\n} \n#iruml {\n    color: #EEEEEE;\n}\n#iuk8uj {     \n    background-color: #541212;\n}\n#iu4lq7 {\n    background-color: #EEEEEE;\n}\n#ikcor6 {\n    background-color: #541212;\n}\n#iyqret {\n    background-color: #541212;\n}\n#iloscw {\n    background-color: #541212;\n}\n#in8dur {\n    background-color: #541212;\n}\n#appdiv {\n    background-color: #541212;\n}"}</content>
+  <iscustomizable>1</iscustomizable>
+  <name>Menu-deleted</name>
+  <powerpagecomponenttype>2</powerpagecomponenttype>
+  <powerpagesiteid>
+    <powerpagesiteid>952afb3b-80e6-4b06-a52b-d28155880003</powerpagesiteid>
+  </powerpagesiteid>
+  <powerpagesitelanguageid>
+    <powerpagesitelanguageid>acca8b8f-f1df-4fa3-b34c-1b670f82f4fa</powerpagesitelanguageid>
+  </powerpagesitelanguageid>
+  <searchcontent>Menu&lt;div data-component-theme="portalThemeColor8" id="igyif" class="row sectionBlockLayout" style="display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: auto;"&gt;&lt;/div&gt;
+&lt;div id="ip09w" data-component-theme="portalThemeColor7" class="row sectionBlockLayout" style="display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: auto;"&gt;
+  &lt;div class="container"&gt;
+    &lt;div id="i9f6t" class="col-md-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;"&gt;
+      &lt;h2 id="iovqi" style="background-color: #541212;"&gt;Welcome to Ristorante Per Squadre&lt;/h2&gt;
+      &lt;p id="iruml"&gt;Experience the finest Italian cuisine in a warm and inviting atmosphere at Ristorante Per Squadre. Our menu features a variety of authentic Italian dishes made with the freshest ingredients. We use traditional family recipes handed down from our parents and grandparents and use locally-sourced ingredients where possible. Mangiamo! &lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="ijn2qq" data-component-theme="portalThemeColor8" class="row sectionBlockLayout" style="display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 15px;"&gt;&lt;/div&gt;
+&lt;div id="iu4lq7" class="row sectionBlockLayout" style="display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 30px;"&gt;&lt;/div&gt;
+&lt;div id="i3izyw" data-component-theme="portalThemeColor1" class="row sectionBlockLayout text-left" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 0px;"&gt;
+  &lt;div id="i1rokd" class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"&gt;
+    &lt;div id="id08k" class="col-md-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;"&gt;
+      &lt;h1 id="izolef" style="text-align: center; border: 0 solid #c8c6c4; max-width: 100%; margin: 10px 10px 10px 10px; padding: 10px 10px 10px 10px; font-weight: 700; letter-spacing: 10px; box-shadow: 0px 0px 0px #000000; text-shadow: 0px 0px 0px #000000;"&gt;SALADS&lt;br id="irdqy" /&gt;&lt;/h1&gt;
+     {% fetchxml sald %}
+     &lt;fetch top="50"&gt;
+      &lt;entity name="crf19_menu"&gt;
+        &lt;attribute name="crf19_category" /&gt;
+        &lt;attribute name="crf19_description" /&gt;
+        &lt;attribute name="crf19_name" /&gt;
+        &lt;attribute name="crf19_price" /&gt;
+        &lt;filter&gt;
+          &lt;condition attribute="crf19_category" operator="eq" value="312850005" /&gt;
+        &lt;/filter&gt;
+      &lt;/entity&gt;
+    &lt;/fetch&gt;
+     {% endfetchxml %}
+     &lt;table style="width:100%" class="table"&gt;
+      {% for result in sald.results.entities %}
+    &lt;tr class="row"&gt;
+      &lt;div class="item"&gt;
+      &lt;td class="itemName"&gt; {{ result.crf19_name }}&lt;/td&gt;
+      &lt;td class="itemDesc"&gt; {{ result.crf19_description }}&lt;/td&gt;
+      &lt;/div&gt;
+      &lt;td class="itemPrice"&gt; {{ result.crf19_price | decimals: 2, "en-US" | prepend: "$"}}&lt;/td&gt;
+    &lt;/tr&gt;
+    
+    {% endfor %}
+    
+    &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+
+&lt;div id="appdiv" class="row sectionBlockLayout" style="display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 30px;"&gt;&lt;/div&gt;
+&lt;div id="i3izyw" data-component-theme="portalThemeColor1" class="row sectionBlockLayout text-left" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 0px;"&gt;
+  &lt;div id="i1rokd" class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"&gt;
+    &lt;div id="id08k" class="col-md-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;"&gt;
+      &lt;h1 id="izolef" style="text-align: center; border: 0 solid #c8c6c4; max-width: 100%; margin: 10px 10px 10px 10px; padding: 10px 10px 10px 10px; font-weight: 700; letter-spacing: 10px; box-shadow: 0px 0px 0px #000000; text-shadow: 0px 0px 0px #000000;"&gt;APPETIZERS&lt;br id="irdqy" /&gt;&lt;/h1&gt;
+     {% fetchxml apps %}
+     &lt;fetch top="50"&gt;
+      &lt;entity name="crf19_menu"&gt;
+        &lt;attribute name="crf19_category" /&gt;
+        &lt;attribute name="crf19_description" /&gt;
+        &lt;attribute name="crf19_name" /&gt;
+        &lt;attribute name="crf19_price" /&gt;
+        &lt;filter&gt;
+          &lt;condition attribute="crf19_category" operator="eq" value="312850003" /&gt;
+        &lt;/filter&gt;
+      &lt;/entity&gt;
+    &lt;/fetch&gt;
+     {% endfetchxml %}
+     &lt;table style="width:100%" class="table"&gt;
+      {% for result in apps.results.entities %}
+    &lt;tr class="row"&gt;
+      &lt;div class="item"&gt;
+      &lt;td class="itemName"&gt; {{ result.crf19_name }}&lt;/td&gt;
+      &lt;td class="itemDesc"&gt; {{ result.crf19_description }}&lt;/td&gt;
+      &lt;/div&gt;
+      &lt;td class="itemPrice"&gt; {{ result.crf19_price | decimals: 2, "en-US" | prepend: "$"}}&lt;/td&gt;
+    &lt;/tr&gt;
+    
+    {% endfor %}
+    
+    &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id="ikcor6" class="row sectionBlockLayout" style="display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 30px;"&gt;&lt;/div&gt;
+&lt;div id="iqo038" data-component-theme="portalThemeColor1" class="row sectionBlockLayout text-left" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;"&gt;
+  &lt;div id="i6ogd2" class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"&gt;
+    &lt;div id="isc6l" class="col-md-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;"&gt;
+      &lt;h1 id="ipoupl" style="text-align: center; margin: 10px 10px 10px 10px; padding: 10px 10px 10px 10px; background-color: rgba(0, 0, 0, 0); letter-spacing: 10px; font-weight: 700;"&gt;ENTREES&lt;/h1&gt;
+      {% fetchxml xxxx %}
+      &lt;fetch top="50"&gt;
+        &lt;entity name="crf19_menu"&gt;
+          &lt;attribute name="crf19_category" /&gt;
+          &lt;attribute name="crf19_description" /&gt;
+          &lt;attribute name="crf19_name" /&gt;
+          &lt;attribute name="crf19_price" /&gt;
+          &lt;filter&gt;
+            &lt;condition attribute="crf19_category" operator="eq" value="312850000" /&gt;
+          &lt;/filter&gt;
+        &lt;/entity&gt;
+      &lt;/fetch&gt;
+      {% endfetchxml %}
+
+     
+      &lt;table style="width:100%" class="table"&gt;
+        {% for result in xxxx.results.entities %}
+      &lt;tr class="row"&gt;
+        &lt;td class="itemName"&gt; {{ result.crf19_name }}&lt;/td&gt;
+        &lt;td class="itemDesc"&gt; {{ result.crf19_description }}&lt;/td&gt;
+        &lt;td class="itemPrice"&gt; {{ result.crf19_price | decimals: 2, "en-US" | prepend: "$" }}&lt;/td&gt;
+      &lt;/tr&gt;
+      
+      {% endfor %}
+      
+      &lt;/table&gt;
+     
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="iyqret" class="row sectionBlockLayout" style="display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 30px;"&gt;&lt;/div&gt;
+&lt;div id="im4xj1" data-component-theme="portalThemeColor1" class="row sectionBlockLayout text-left" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;"&gt;
+  &lt;div id="i9tsar" class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"&gt;
+    &lt;div id="i2boi" class="col-md-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;"&gt;
+      &lt;h1 id="iz0jvs" style="text-align: center; color: var(--portalThemeColor8); letter-spacing: 10px; font-weight: 700;"&gt;SIDES&amp;nbsp;&lt;/h1&gt;
+      {% fetchxml side %}
+      &lt;fetch top="50"&gt;
+        &lt;entity name="crf19_menu"&gt;
+          &lt;attribute name="crf19_category" /&gt;
+          &lt;attribute name="crf19_description" /&gt;
+          &lt;attribute name="crf19_name" /&gt;
+          &lt;attribute name="crf19_price" /&gt;
+          &lt;filter&gt;
+            &lt;condition attribute="crf19_category" operator="eq" value="312850002" /&gt;
+          &lt;/filter&gt;
+          
+        &lt;/entity&gt;
+      &lt;/fetch&gt;
+
+      {% endfetchxml %}
+      &lt;table style="width:100%" class="table"&gt;
+        {% for result in side.results.entities %}
+      &lt;tr class="row"&gt;
+        &lt;div class="item"&gt;
+        &lt;td class="itemName"&gt; {{ result.crf19_name }}&lt;/td&gt;
+        &lt;td class="itemDesc"&gt; {{ result.crf19_description }}&lt;/td&gt;
+      &lt;/div&gt;
+        &lt;td class="itemPrice"&gt; {{ result.crf19_price | decimals: 2, "en-US" | prepend: "$"}}&lt;/td&gt;
+      &lt;/tr&gt;
+      
+      {% endfor %}
+      
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="iloscw" class="row sectionBlockLayout" style="display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 30px;"&gt;&lt;/div&gt;
+&lt;div id="ipnkve" data-component-theme="portalThemeColor1" class="row sectionBlockLayout text-left" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;"&gt;
+  &lt;div id="ikcrlz" class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"&gt;
+    &lt;div id="ig05yq" class="col-md-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;"&gt;
+      &lt;h1 id="iyjz9n" style="text-align: center; color: var(--portalThemeColor8); background-color: rgba(139, 154, 70, 0); letter-spacing: 10px; font-weight: 700;"&gt;DESSERTS&lt;/h1&gt;
+      {% fetchxml dess %}
+      &lt;fetch top="50"&gt;
+        &lt;entity name="crf19_menu"&gt;
+          &lt;attribute name="crf19_category" /&gt;
+          &lt;attribute name="crf19_description" /&gt;
+          &lt;attribute name="crf19_name" /&gt;
+          &lt;attribute name="crf19_price" /&gt;
+          &lt;filter&gt;
+            &lt;condition attribute="crf19_category" operator="eq" value="312850004" /&gt;
+          &lt;/filter&gt;
+        &lt;/entity&gt;
+      &lt;/fetch&gt;
+      {% endfetchxml %}
+      &lt;table style="width:100%" class="table"&gt;
+        {% for result in dess.results.entities %}
+      &lt;tr class="row"&gt;
+        &lt;td class="itemName"&gt; {{ result.crf19_name }}&lt;/td&gt;
+        &lt;td class="itemDesc"&gt; {{ result.crf19_description }}&lt;/td&gt;
+        &lt;td class="itemPrice"&gt; {{ result.crf19_price | decimals: 2, "en-US" | prepend: "$" }}&lt;/td&gt;
+      &lt;/tr&gt;
+      
+      {% endfor %}
+      
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="isym2e" data-component-theme="portalThemeColor7" class="row sectionBlockLayout" style="display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 30px;"&gt;&lt;/div&gt;
+&lt;div id="ia8uax" data-component-theme="portalThemeColor1" class="row sectionBlockLayout text-left" style="display: flex; flex-wrap: wrap; margin: 0px; min-height: auto; padding: 8px;"&gt;
+  &lt;div id="if8h42" class="container" style="padding: 0px; display: flex; flex-wrap: wrap;"&gt;
+    &lt;div id="iexfdc" class="col-md-12 columnBlockLayout" style="flex-grow: 1; display: flex; flex-direction: column; min-width: 250px; word-break: break-word;"&gt;
+      &lt;h1 id="iud5kj" style="text-align: center; color: var(--portalThemeColor8); letter-spacing: 10px; font-weight: 700;"&gt;DRINKS&lt;/h1&gt;
+      {% fetchxml bevs %}
+      &lt;fetch top="50"&gt;
+        &lt;entity name="crf19_menu"&gt;
+          &lt;attribute name="crf19_category" /&gt;
+          &lt;attribute name="crf19_description" /&gt;
+          &lt;attribute name="crf19_name" /&gt;
+          &lt;attribute name="crf19_price" /&gt;
+          &lt;filter&gt;
+            &lt;condition attribute="crf19_category" operator="eq" value="312850001" /&gt;
+          &lt;/filter&gt;
+        &lt;/entity&gt;
+      &lt;/fetch&gt;
+      {% endfetchxml %}
+      &lt;table style="width:100%" class="table"&gt;
+        {% for result in bevs.results.entities %}
+      &lt;tr class="row"&gt;
+        &lt;div class="item"&gt;
+        &lt;td class="itemName"&gt; {{ result.crf19_name }}&lt;/td&gt;
+       
+        &lt;td class="itemPrice"&gt; {{ result.crf19_price | decimals: 2, "en-US" | prepend: "$"}}&lt;/td&gt;
+      &lt;/div&gt;
+      &lt;/tr&gt;
+      
+      {% endfor %}
+      
+      &lt;/table&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div id="in8dur" class="row sectionBlockLayout" style="display: flex; flex-wrap: wrap; padding: 8px; margin: 0px; min-height: 30px;"&gt;&lt;/div&gt;
+
+  Menu-deleted</searchcontent>
+  <statecode>0</statecode>
+  <statuscode>1</statuscode>
+</powerpagecomponent>
